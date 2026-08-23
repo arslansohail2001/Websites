@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Precision Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#141b2b",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-secondary-container": "#006172",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#ffede6",
+                      "surface-container-low": "#f1f3ff",
+                      "on-background": "#141b2b",
+                      "secondary": "#00687a",
+                      "primary-fixed": "#dbe1ff",
+                      "primary": "#004ac6",
+                      "on-primary-container": "#eeefff",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-fixed": "#360f00",
+                      "outline-variant": "#c3c6d7",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#f9f9ff",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "background": "#f9f9ff",
+                      "surface-container-high": "#e1e8fd",
+                      "surface-variant": "#dce2f7",
+                      "on-secondary-fixed": "#001f26",
+                      "secondary-fixed": "#acedff",
+                      "surface-dim": "#d3daef",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#edf0ff",
+                      "tertiary": "#943700",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#dce2f7",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#434655",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e9edff",
+                      "surface-tint": "#0053db",
+                      "primary-container": "#2563eb",
+                      "surface": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#57dffe",
+                      "inverse-surface": "#293040",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "outline": "#737686",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "tertiary-container": "#bc4800",
+                      "on-primary-fixed": "#00174b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "xl": "80px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "lg": "48px",
+                      "container-max": "1280px",
+                      "xs": "8px",
+                      "sm": "16px"
+              },
+              "fontFamily": {
+                      "h3": ["Space Grotesk"],
+                      "h4": ["Space Grotesk"],
+                      "label": ["Inter"],
+                      "h1-mobile": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "h1": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "small": ["Inter"],
+                      "data-display": ["Space Grotesk"],
+                      "h2": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "h3": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "h4": ["20px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "label": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h1-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h1": ["72px", {"lineHeight": "1.05", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "small": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                      "data-display": ["32px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                      "h2": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { background-color: #f9f9ff; color: #141b2b; }
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(195, 198, 215, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(195, 198, 215, 0.2) 1px, transparent 1px);
+        }
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body text-body selection:bg-primary-container selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center h-16">
+<div class="flex items-center gap-xs cursor-pointer opacity-80 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">grid_view</span>
+<span class="font-h4 text-h4 font-extrabold text-on-surface tracking-tighter">PRECISION</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg h-full">
+<a class="h-full flex items-center px-sm text-on-surface-variant hover:text-on-surface transition-colors font-label text-label uppercase tracking-widest hover:bg-primary/5 transition-all duration-200" href="#">Home</a>
+<a class="h-full flex items-center px-sm text-on-surface-variant hover:text-on-surface transition-colors font-label text-label uppercase tracking-widest hover:bg-primary/5 transition-all duration-200" href="#">Work</a>
+<a class="h-full flex items-center px-sm text-on-surface-variant hover:text-on-surface transition-colors font-label text-label uppercase tracking-widest hover:bg-primary/5 transition-all duration-200" href="#">Services</a>
+<a class="h-full flex items-center px-sm text-primary dark:text-primary-fixed border-b-2 border-primary font-label text-label uppercase tracking-widest" href="#">Insights</a>
+</nav>
+<button class="font-label text-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface flex items-center gap-xs">
+                LET'S TALK
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-xl relative">
+<div class="absolute inset-0 grid-bg z-0 opacity-50 pointer-events-none"></div>
+<!-- Category Nav -->
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-lg overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-md pb-xs whitespace-nowrap border-b border-outline-variant/30">
+<button class="font-label text-label uppercase tracking-widest text-primary border-b-2 border-primary pb-xs px-xs">All Insights</button>
+<button class="font-label text-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors pb-xs px-xs">Strategy</button>
+<button class="font-label text-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors pb-xs px-xs">Design</button>
+<button class="font-label text-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors pb-xs px-xs">Technology</button>
+<button class="font-label text-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors pb-xs px-xs">AI</button>
+<button class="font-label text-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors pb-xs px-xs">Business</button>
+</div>
+</div>
+<!-- Featured Article -->
+<section class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-xl">
+<div class="group cursor-pointer grid grid-cols-1 md:grid-cols-12 gap-lg items-center border border-outline-variant bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="md:col-span-7 h-64 md:h-[500px] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed conceptual image representing artificial intelligence intersecting with corporate strategy. A glowing, intricate neural network mesh overlays a sleek, modern, minimalist architectural glass building interior. High-key lighting, bright white and crisp blue palette. The mood is forward-looking, intelligent, and clean. Professional editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOhKL4S_CPyl5E5Rcg5mU-lqDH0cBB_otxkozfEh84a382fcD-WtjVzG0X0X3KcoFuoFTRXjMDYnCp4njtrrMa60mwNk7iATcE47XzrA7-Onio5tW2OwpLOzI7-jUgzrnYS4oE0nNUPLNoEBf3vVEkPpZNqYEONmP4Gw9IEXBDgxOYUMKsbF9Oj4Rt3EqITwV63FnplXyxwCQu_6W1bwSCudT0X96gXTeIHf6lw9hN0ZEwLLa0Tpjv"/>
+<div class="absolute top-md left-md bg-surface/90 backdrop-blur px-sm py-xs rounded font-label text-label uppercase text-primary tracking-widest border border-outline-variant/50">Featured</div>
+</div>
+<div class="md:col-span-5 p-md md:pr-xl flex flex-col justify-center">
+<div class="flex items-center gap-sm mb-sm font-small text-small text-on-surface-variant">
+<span class="font-semibold text-primary">Technology &amp; AI</span>
+<span>•</span>
+<span>8 min read</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface mb-md group-hover:text-primary transition-colors">The Cognitive Enterprise: Architecting Systems for Generative Intelligence</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed line-clamp-3">
+                        Beyond the hype cycle of large language models lies the structural challenge of integrating cognitive capabilities into legacy enterprise architecture. We explore the design patterns required to build intelligent, adaptable organizations that leverage AI not as a tool, but as a core operational nervous system.
+                    </p>
+<div class="flex items-center gap-xs font-label text-label uppercase tracking-widest text-primary group-hover:translate-x-2 transition-transform">
+                        Read Article <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex justify-between items-end mb-lg border-b border-outline-variant/30 pb-sm">
+<h3 class="font-h3 text-h3 text-on-surface">Latest Thinking</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md lg:gap-lg">
+<!-- Article Card 1 -->
+<article class="group flex flex-col border border-outline-variant bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+<div class="h-48 w-full overflow-hidden border-b border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist workspace scene demonstrating sophisticated UI/UX design. A sleek laptop screen displays a complex but beautifully structured dashboard interface. The environment is bright, with soft natural light streaming across a matte white desk. Professional, high-end editorial tech photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASqUzKBHnqFuTKWv9i4SL4vbZHS8wpqe6WPXBW_YqyzSVGlwXoIDEmbYdOMVh_LMaSxT8WaFyDMKl2HghNw8EYKf6AXjborFENYbBkT8Jqfp67M1K-yakZGqoMoS7fXse_t7_5tQJCi5e7peg_-1NA98fQQMry24A30fCGjBK7eed8tImXEU2ERFXqxwDeaeIPVDRZOZL3ycODhd_3xwAJiYjF0hQiuO3uFc9ibk90JYUjpKl_-KKy"/>
+</div>
+<div class="p-md flex-grow flex flex-col">
+<div class="flex items-center gap-sm mb-xs font-small text-small text-on-surface-variant">
+<span class="text-primary font-semibold">Design</span>
+<span>•</span>
+<span>Oct 12, 2024</span>
+</div>
+<h4 class="font-h4 text-h4 text-on-surface mb-sm group-hover:text-primary transition-colors line-clamp-2">Designing for Density: Information Architecture in Financial Interfaces</h4>
+<p class="font-body text-body text-on-surface-variant mb-md flex-grow line-clamp-3">
+                            Balancing extreme data density with cognitive clarity requires a systematic approach to typographic hierarchy and spatial geometry.
+                        </p>
+<div class="flex items-center gap-xs font-label text-label uppercase tracking-widest text-primary mt-auto">
+                            Read More
+                        </div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="group flex flex-col border border-outline-variant bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+<div class="h-48 w-full overflow-hidden border-b border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract representation of strategic business consulting. Clean geometric shapes intersecting on a stark white background with subtle shadows. Soft, diffused lighting creates a premium, authoritative corporate aesthetic. Minimalist and structured visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY5vMmBD5LXlaqITNGjcKUY4k4j-sn4-BsAjHvKhI3EPG6hf80RJUBQCQT_mSWyfxXPorYplNsRzv-dnpHogQ72WJiW5gDRY5l8ENOb0hOCiWRRPiUXXWTBZVwki4wNo_ELxB6FG_tqzk6nlDGc9cJSVkhGHy11t0VcauF3QvHr_1SIurk5DSxti7YdKiPp0KTElZm1XHD9R8lNTBAD4j9dr-00Qyx9Tt_Ced0ytmuimkm4cVWRu8N"/>
+</div>
+<div class="p-md flex-grow flex flex-col">
+<div class="flex items-center gap-sm mb-xs font-small text-small text-on-surface-variant">
+<span class="text-primary font-semibold">Strategy</span>
+<span>•</span>
+<span>Oct 05, 2024</span>
+</div>
+<h4 class="font-h4 text-h4 text-on-surface mb-sm group-hover:text-primary transition-colors line-clamp-2">The Architecture of Resilience: Post-Digital Business Models</h4>
+<p class="font-body text-body text-on-surface-variant mb-md flex-grow line-clamp-3">
+                            Agility is no longer sufficient. Enterprise systems must be engineered for structural resilience in the face of continuous market volatility.
+                        </p>
+<div class="flex items-center gap-xs font-label text-label uppercase tracking-widest text-primary mt-auto">
+                            Read More
+                        </div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="group flex flex-col border border-outline-variant bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+<div class="h-48 w-full overflow-hidden border-b border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro photography of a high-end silicon microchip or server rack, illuminated with a cool, sterile blue and white light. The image conveys deep technical capability, precision engineering, and enterprise infrastructure. Crisp focus, clean lines, professional tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFUhXQxgnXHl7hzYlejvwFjx6M-QwexJh0wUfF27VkWZnoMMnCREpT2E-8XupNo2of4qz9yur1mQFkHaLlPt_fJeT_pyIB4hwscO4VPXKTjJCxkHRi_Va1T4DvIfvX9vPbDVNrnyD5tX5PysohfJIC5j29K75b7VxqZEeSIVKcEQlcyiueUwmMXhxzYjdoyiVNLvNs0UOTLvATIpHqyk6oxX5hoSumsDx0RxrpBrYXWNKOXXWBj1Dw"/>
+</div>
+<div class="p-md flex-grow flex flex-col">
+<div class="flex items-center gap-sm mb-xs font-small text-small text-on-surface-variant">
+<span class="text-primary font-semibold">Technology</span>
+<span>•</span>
+<span>Sep 28, 2024</span>
+</div>
+<h4 class="font-h4 text-h4 text-on-surface mb-sm group-hover:text-primary transition-colors line-clamp-2">Decoupling the Monolith: A Pragmatic Approach to Microservices</h4>
+<p class="font-body text-body text-on-surface-variant mb-md flex-grow line-clamp-3">
+                            A rigorous methodology for identifying domain boundaries and transitioning legacy applications into robust, scalable distributed systems.
+                        </p>
+<div class="flex items-center gap-xs font-label text-label uppercase tracking-widest text-primary mt-auto">
+                            Read More
+                        </div>
+</div>
+</article>
+</div>
+<div class="mt-lg flex justify-center">
+<button class="px-lg py-sm border border-outline-variant text-on-surface font-label text-label uppercase tracking-widest rounded-full hover:bg-surface-variant transition-colors">Load More Insights</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-on-surface dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl flex flex-col md:flex-row justify-between gap-lg">
+<div>
+<h3 class="font-h3 text-h3 text-surface-bright mb-sm">PRECISION</h3>
+<p class="text-outline-variant font-body text-body max-w-sm">Architecting intelligent systems for the modern enterprise.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex flex-wrap gap-md">
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Strategy</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Design</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Development</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">AI</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Work</a>
+<a class="font-label text-label uppercase tracking-widest text-surface-bright underline hover:text-primary-fixed-dim transition-colors" href="#">Insights</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Privacy</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Terms</a>
+</div>
+<p class="text-outline-variant font-label text-label uppercase tracking-widest mt-md">© 2024 PRECISION TECHNOLOGY GROUP. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Precision Technology Group - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f9f9ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c3c6d7;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #737686;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#141b2b",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-secondary-container": "#006172",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#ffede6",
+                      "surface-container-low": "#f1f3ff",
+                      "on-background": "#141b2b",
+                      "secondary": "#00687a",
+                      "primary-fixed": "#dbe1ff",
+                      "primary": "#004ac6",
+                      "on-primary-container": "#eeefff",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-fixed": "#360f00",
+                      "outline-variant": "#c3c6d7",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#f9f9ff",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "background": "#f9f9ff",
+                      "surface-container-high": "#e1e8fd",
+                      "surface-variant": "#dce2f7",
+                      "on-secondary-fixed": "#001f26",
+                      "secondary-fixed": "#acedff",
+                      "surface-dim": "#d3daef",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#edf0ff",
+                      "tertiary": "#943700",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#dce2f7",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#434655",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e9edff",
+                      "surface-tint": "#0053db",
+                      "primary-container": "#2563eb",
+                      "surface": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#57dffe",
+                      "inverse-surface": "#293040",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "outline": "#737686",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "tertiary-container": "#bc4800",
+                      "on-primary-fixed": "#00174b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "xl": "80px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "lg": "48px",
+                      "container-max": "1280px",
+                      "xs": "8px",
+                      "sm": "16px"
+              },
+              "fontFamily": {
+                      "h3": ["Space Grotesk"],
+                      "h4": ["Space Grotesk"],
+                      "label": ["Inter"],
+                      "h1-mobile": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "h1": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "small": ["Inter"],
+                      "data-display": ["Space Grotesk"],
+                      "h2": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "h3": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "h4": ["20px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "label": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h1-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h1": ["72px", {"lineHeight": "1.05", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "body": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "small": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                      "data-display": ["32px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                      "h2": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center h-16">
+<!-- Leading Icon & Brand -->
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="grid_view">grid_view</span>
+<span class="font-h4 text-h4 font-extrabold text-on-surface tracking-tighter">PRECISION</span>
+</div>
+<!-- Desktop Navigation Integration (Using NavigationDrawer JSON labels for structure) -->
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-label text-label uppercase text-on-surface-variant hover:text-on-surface hover:bg-primary/5 transition-all duration-200 px-xs py-base rounded-DEFAULT" href="#">Home</a>
+<a class="font-label text-label uppercase text-on-surface-variant hover:text-on-surface hover:bg-primary/5 transition-all duration-200 px-xs py-base rounded-DEFAULT" href="#">Work</a>
+<a class="font-label text-label uppercase text-primary border-b-2 border-primary opacity-80 scale-95 transition-transform px-xs py-base" href="#">Services</a>
+<a class="font-label text-label uppercase text-on-surface-variant hover:text-on-surface hover:bg-primary/5 transition-all duration-200 px-xs py-base rounded-DEFAULT" href="#">About</a>
+<a class="font-label text-label uppercase text-on-surface-variant hover:text-on-surface hover:bg-primary/5 transition-all duration-200 px-xs py-base rounded-DEFAULT" href="#">Insights</a>
+<a class="font-label text-label uppercase text-on-surface-variant hover:text-on-surface hover:bg-primary/5 transition-all duration-200 px-xs py-base rounded-DEFAULT" href="#">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<button class="hidden md:flex items-center gap-xs font-label text-label bg-primary text-on-primary px-sm py-xs rounded-full hover:bg-primary/90 transition-colors">
+                LET'S TALK
+                <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="md:hidden p-xs text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-xl">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-[120px]">
+<div class="max-w-4xl">
+<h1 class="font-h1 text-h1 md:text-[88px] md:leading-[0.95] text-on-surface mb-lg">
+                    Capabilities built around outcomes.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    We deploy specialized, cross-functional teams to solve complex enterprise challenges. Our methodology is rooted in technical precision and strategic clarity.
+                </p>
+</div>
+</section>
+<!-- Services Sections -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter space-y-[160px]">
+<!-- Section 1: Strategy -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Title & Context -->
+<div class="md:col-span-4 sticky top-32">
+<span class="font-label text-label text-primary uppercase tracking-widest mb-sm block">01 / Focus Area</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">Strategy</h2>
+<p class="font-body text-body text-on-surface-variant mb-lg">
+                        We define clear, actionable roadmaps that align business objectives with technological possibilities. Our strategic foundation ensures every engineering effort delivers measurable ROI.
+                    </p>
+<a class="inline-flex items-center gap-xs font-label text-label text-primary hover:text-primary-container transition-colors group" href="#">
+                        EXPLORE STRATEGY ENGAGEMENTS
+                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+<!-- Bento Layout Content -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Service List Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-lg hover:border-primary/50 transition-colors">
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Core Disciplines</h3>
+<ul class="space-y-sm font-body text-body text-on-surface-variant">
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Business &amp; Technical Modeling</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Digital Transformation Roadmaps</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Enterprise Architecture Planning</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Data &amp; Infrastructure Strategy</li>
+</ul>
+</div>
+<!-- Image Card -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/30 h-[280px]">
+<img class="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-500" data-alt="A minimalist, high-end 3D rendering of abstract geometric blocks organizing themselves into a structured architectural foundation. The scene uses a bright, pristine white light-mode aesthetic with subtle shadows and sharp focus. Accents of deep blue (#004ac6) signify data points and connection nodes. The overall mood is precise, logical, and highly professional, suitable for an enterprise strategy visualization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8m142t5SRfBEKX0HwMJ-tOsMLgGJZ0S98yVYDHch1inQ3kZazxxkes3yHfoOUxCFSdC_rbYNukwBE6MZUOp13x3tsmuqpu4pftqHTAELJ1WqqaYbojeHDsKikklOX9ndYkq2m4f8BhUFsDrDltU-sr1tgJ9tCF4A5DuuVmGfbyJKwFWVlAEqHqmdDLnFWMSA_2E8Vi2jHIRH9w4LenkhW8i7OmThkFmgb4t-7_cox6FhW0FPYeKWq"/>
+</div>
+<!-- Process & Deliverables spanning both columns -->
+<div class="md:col-span-2 bg-surface-container-low rounded-lg p-lg border border-outline-variant/20 flex flex-col md:flex-row gap-lg justify-between">
+<div class="flex-1">
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Methodology</h3>
+<p class="font-body text-body text-on-surface">Discovery → Systems Analysis → Target Architecture Definition → Execution Roadmap</p>
+</div>
+<div class="flex-1">
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Key Deliverables</h3>
+<p class="font-body text-body text-on-surface">Strategic Briefs, Technical Audits, Cost-Benefit Models, Phased Rollout Plans.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Design -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4 sticky top-32 order-1 md:order-2">
+<span class="font-label text-label text-primary uppercase tracking-widest mb-sm block">02 / Focus Area</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">Design</h2>
+<p class="font-body text-body text-on-surface-variant mb-lg">
+                        Crafting intuitive interfaces that elevate user experience while maintaining strict technical viability. We build systematic design languages that scale across enterprise platforms.
+                    </p>
+<a class="inline-flex items-center gap-xs font-label text-label text-primary hover:text-primary-container transition-colors group" href="#">
+                        VIEW DESIGN SYSTEMS
+                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-md order-2 md:order-1">
+<div class="md:col-span-2 bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/30 h-[320px]">
+<img class="w-full h-full object-cover" data-alt="An elegant, floating arrangement of translucent digital interface components and wireframes in a bright, spacious studio setting. The lighting is soft and diffused, emphasizing the sleek, minimalist light-mode aesthetic. Layers of glassmorphism panels overlap slightly, casting faint shadows on a clean off-white background. Subtle technological details highlight precision and high-fidelity craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSkbKbs4yfjF47qeE3IZIQqUnapuD4e6iuPS64h5LUbeFlRZ4VzjHDxQA9zQkRqTBZ9kAVKtjg__qbpCEXTUwWL5rcOypvVgaJbrt2zI7kcbVAzveWxl4lNUG5M4vGtqo-Sggd2ej_dqIC4LH32rbWRvJKq3zMH-ZgZ6Q7IRWL6YcJRk13qVWYI1w1F4YSE-C2oiUOLPrdajJzn3dcBHKlVQWYYneWuhjrWsqrSNwecCRLWZtXz_2y"/>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-lg hover:border-primary/50 transition-colors">
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Core Disciplines</h3>
+<ul class="space-y-sm font-body text-body text-on-surface-variant">
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> UX Research &amp; Testing</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> High-Fidelity UI Design</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Design System Engineering</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Interactive Prototyping</li>
+</ul>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-lg p-lg flex flex-col justify-center">
+<div class="mb-md">
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Methodology</h3>
+<p class="font-small text-small text-on-surface">Empathize → Define → Ideate → Prototype → Validate</p>
+</div>
+<div>
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Key Deliverables</h3>
+<p class="font-small text-small text-on-surface">Figma Component Libraries, Usability Reports, Motion Specs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Development -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4 sticky top-32">
+<span class="font-label text-label text-primary uppercase tracking-widest mb-sm block">03 / Focus Area</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">Development</h2>
+<p class="font-body text-body text-on-surface-variant mb-lg">
+                        Building robust, scalable platforms using modern engineering practices. We treat code as craft, focusing on performance, security, and maintainable cloud infrastructure.
+                    </p>
+<a class="inline-flex items-center gap-xs font-label text-label text-primary hover:text-primary-container transition-colors group" href="#">
+                        REVIEW ARCHITECTURE SPECS
+                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Tech Stack Pills -->
+<div class="col-span-1 md:col-span-12 bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-lg flex flex-wrap gap-sm items-center">
+<span class="font-label text-label text-on-surface-variant uppercase mr-sm">Technologies:</span>
+<span class="px-sm py-xs bg-surface-container-low border border-outline-variant/30 rounded-full font-small text-small">React/Next.js</span>
+<span class="px-sm py-xs bg-surface-container-low border border-outline-variant/30 rounded-full font-small text-small">Node.js</span>
+<span class="px-sm py-xs bg-surface-container-low border border-outline-variant/30 rounded-full font-small text-small">Python/Django</span>
+<span class="px-sm py-xs bg-surface-container-low border border-outline-variant/30 rounded-full font-small text-small">AWS/GCP</span>
+<span class="px-sm py-xs bg-surface-container-low border border-outline-variant/30 rounded-full font-small text-small">Kubernetes</span>
+</div>
+<div class="col-span-1 md:col-span-6 bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-lg hover:border-primary/50 transition-colors">
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Core Disciplines</h3>
+<ul class="space-y-sm font-body text-body text-on-surface-variant">
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Full-Stack Web Applications</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Cloud Native Infrastructure</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> API Design &amp; Integration</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> DevOps &amp; CI/CD Pipelines</li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-6 bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A sophisticated, abstract representation of modern software architecture featuring illuminated data streams and structural network grids. The composition relies on a clean, light-mode palette with crisp white surfaces intersected by vibrant blue and cyan geometric lines representing code execution. The atmosphere is technical, scalable, and engineered with absolute clarity and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9jpEs-UqOoyPcqyKgdhsBtcHygt6syhqE6ffI2vBiODTtb9OSTCUZqouOT6XY7gCcrPh_FwtR5YaEWoYzkD4FDopTytJFvvDmIdaptS2Yc28VGUOHsVa4Ye7EBcar0o_Dfmrpb4vhJmPgTGstpNriDIoJ4DUGbGY5I-rDxITo08_pd67Vg1GwSRJQkivTzSvPQnfuicJ6OBIHRkgbXL97vEjGGy53R3XdO9qPMbNVsYq8CEFtR7t9"/>
+</div>
+<div class="col-span-1 md:col-span-12 bg-surface-container-low border border-outline-variant/20 rounded-lg p-lg flex flex-col md:flex-row gap-lg justify-between">
+<div class="flex-1">
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Methodology</h3>
+<p class="font-body text-body text-on-surface">Agile Sprints → CI/CD → Code Review → Automated QA → Zero-downtime Deployment</p>
+</div>
+<div class="flex-1">
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Key Deliverables</h3>
+<p class="font-body text-body text-on-surface">Production-Ready Repositories, API Documentation, Terraform Scripts.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: AI -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4 sticky top-32 order-1 md:order-2">
+<span class="font-label text-label text-primary uppercase tracking-widest mb-sm block">04 / Focus Area</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">AI Integration</h2>
+<p class="font-body text-body text-on-surface-variant mb-lg">
+                        Deploying intelligent systems to automate workflows, personalize experiences, and uncover deep analytical insights from enterprise data lakes.
+                    </p>
+<a class="inline-flex items-center gap-xs font-label text-label text-primary hover:text-primary-container transition-colors group" href="#">
+                        DISCUSS AI READINESS
+                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-md order-2 md:order-1">
+<div class="md:col-span-2 bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/30 h-[320px] relative">
+<!-- Abstract Shader/Data Visualization placeholder implies here, using image fallback -->
+<img class="w-full h-full object-cover" data-alt="A conceptual visualization of artificial intelligence featuring glowing, interconnected neural network nodes floating within a pristine, minimalist white space. The lighting is bright and high-key, creating an ethereal yet highly technical enterprise aesthetic. Deep blue accents trace the pathways of data flow, symbolizing intelligent processing, predictive analytics, and algorithmic clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIGH4TwGIJcfxyCPjpX34KZW6aDLLtYrlqPaTCk37WOUseDHSm7JMCeiJAtHGBGK07AFgoA-DY0JHdGpZ2-rWAh12G75vJq1iObCZ7z4U7orUv5EzYODkBjPUphdKbzf1DX1AAaUbqzc2h6-Q8I233tdWq7zZH1z9mCLqD3fRBbCinOXZIzxbxG3opnav7YuR6duGHYxC2anLG6uffGjT06v_vzhUm-JxjSSlRt5v_yUioA82s1NHy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-lg">
+<div class="bg-surface-container-lowest/90 backdrop-blur border border-outline-variant/50 p-md rounded-lg max-w-sm">
+<h3 class="font-h4 text-h4 text-on-surface mb-xs">Predictive Modeling</h3>
+<p class="font-small text-small text-on-surface-variant">Transforming historical data into forward-looking operational intelligence.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-lg hover:border-primary/50 transition-colors">
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Core Disciplines</h3>
+<ul class="space-y-sm font-body text-body text-on-surface-variant">
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Large Language Models (LLMs)</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Predictive Analytics</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Computer Vision Systems</li>
+<li class="flex items-center gap-sm"><span class="w-[4px] h-[4px] bg-primary rounded-full"></span> Automated Data Pipelines</li>
+</ul>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-lg p-lg flex flex-col justify-center">
+<div class="mb-md">
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Methodology</h3>
+<p class="font-small text-small text-on-surface">Data Gathering → Model Selection → Training → Fine-Tuning → Integration</p>
+</div>
+<div>
+<h3 class="font-label text-label text-on-surface-variant uppercase mb-xs">Key Deliverables</h3>
+<p class="font-small text-small text-on-surface">Trained Custom Models, API Endpoints, Data Governance Frameworks.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Global CTA -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-[160px]">
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="max-w-2xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-sm">Ready to build?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Engage our team for a technical audit or to scope your next enterprise initiative.
+                    </p>
+</div>
+<button class="shrink-0 bg-primary text-on-primary font-h4 text-h4 px-lg py-sm rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-sm">
+                    Initiate Project
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="w-full bg-on-surface dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl flex flex-col md:flex-row justify-between gap-lg">
+<div class="flex flex-col justify-between">
+<span class="font-h3 text-h3 text-surface-bright mb-lg block">PRECISION</span>
+<p class="font-label text-label uppercase tracking-widest text-outline-variant">© 2024 PRECISION TECHNOLOGY GROUP. ALL RIGHTS RESERVED.</p>
+</div>
+<nav class="flex flex-wrap gap-x-lg gap-y-sm md:max-w-md justify-end items-start">
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Strategy</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Design</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Development</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">AI</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Work</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Insights</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Privacy</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright hover:text-primary-fixed-dim transition-colors" href="#">Terms</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Simple smooth scroll to top if needed, as mentioned in footer interactions
+        document.querySelectorAll('footer a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if(link.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body></html>

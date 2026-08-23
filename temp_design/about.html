@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - Precision Technology Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#141b2b",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-secondary-container": "#006172",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#ffede6",
+                      "surface-container-low": "#f1f3ff",
+                      "on-background": "#141b2b",
+                      "secondary": "#00687a",
+                      "primary-fixed": "#dbe1ff",
+                      "primary": "#004ac6",
+                      "on-primary-container": "#eeefff",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-fixed": "#360f00",
+                      "outline-variant": "#c3c6d7",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#f9f9ff",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "background": "#f9f9ff",
+                      "surface-container-high": "#e1e8fd",
+                      "surface-variant": "#dce2f7",
+                      "on-secondary-fixed": "#001f26",
+                      "secondary-fixed": "#acedff",
+                      "surface-dim": "#d3daef",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#edf0ff",
+                      "tertiary": "#943700",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#dce2f7",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#434655",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e9edff",
+                      "surface-tint": "#0053db",
+                      "primary-container": "#2563eb",
+                      "surface": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#57dffe",
+                      "inverse-surface": "#293040",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "outline": "#737686",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "tertiary-container": "#bc4800",
+                      "on-primary-fixed": "#00174b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "xl": "80px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "lg": "48px",
+                      "container-max": "1280px",
+                      "xs": "8px",
+                      "sm": "16px"
+              },
+              "fontFamily": {
+                      "h3": [
+                              "Space Grotesk"
+                      ],
+                      "h4": [
+                              "Space Grotesk"
+                      ],
+                      "label": [
+                              "Inter"
+                      ],
+                      "h1-mobile": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "h1": [
+                              "Space Grotesk"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "small": [
+                              "Inter"
+                      ],
+                      "data-display": [
+                              "Space Grotesk"
+                      ],
+                      "h2": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "h3": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h4": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h1-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h1": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.05",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "small": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "data-display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "h2": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .symbol-filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Subtle reveal animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex justify-between items-center h-16">
+<button aria-label="Menu" class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" onclick="document.getElementById('nav-drawer').classList.remove('translate-x-full');">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<div class="font-h4 text-h4 font-extrabold text-on-surface tracking-tighter">PRECISION</div>
+<button class="font-label text-label uppercase tracking-widest text-primary-container hover:text-primary transition-colors">LET'S TALK</button>
+</div>
+</header>
+<!-- NavigationDrawer (Hidden by default) -->
+<div class="fixed inset-y-0 right-0 w-full md:w-96 z-[60] bg-surface dark:bg-inverse-surface shadow-xl flex flex-col p-lg space-y-md translate-x-full transition-transform duration-300 ease-in-out" id="nav-drawer">
+<div class="flex justify-between items-center mb-xl">
+<h2 class="font-h3 text-h3 font-semibold text-primary dark:text-primary-fixed">NAVIGATION</h2>
+<button class="text-on-surface-variant hover:text-on-surface p-2" onclick="document.getElementById('nav-drawer').classList.add('translate-x-full');">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-lg">
+<a class="flex items-center gap-md text-on-surface-variant font-h2 text-h2 hover:text-on-surface hover:translate-x-2 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">home</span>
+                Home
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant font-h2 text-h2 hover:text-on-surface hover:translate-x-2 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">work</span>
+                Work
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant font-h2 text-h2 hover:text-on-surface hover:translate-x-2 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">layers</span>
+                Services
+            </a>
+<a class="flex items-center gap-md text-primary font-h2 text-h2 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined symbol-filled">info</span>
+                About
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant font-h2 text-h2 hover:text-on-surface hover:translate-x-2 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">article</span>
+                Insights
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant font-h2 text-h2 hover:text-on-surface hover:translate-x-2 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">mail</span>
+                Contact
+            </a>
+</nav>
+</div>
+<main class="pt-[120px] pb-xl">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-[120px]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-10 md:col-start-2 text-center reveal-up">
+<p class="font-label text-label uppercase tracking-widest text-primary-container mb-md">Our Philosophy</p>
+<h1 class="font-h1-mobile md:font-h1 text-h1-mobile md:text-h1 text-on-surface mb-lg">
+                        We believe complex technology should feel simple.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
+                        In an era of overwhelming technical complexity, we engineer clarity. Our approach strips away the superfluous, leaving only robust, highly performant systems designed for scale and institutional trust.
+                    </p>
+</div>
+</div>
+<div class="mt-xl reveal-up">
+<div class="w-full h-[400px] md:h-[600px] bg-cover bg-center bg-surface-container-high rounded-xl overflow-hidden relative" data-alt="A sprawling, immaculate server room or data center bathed in cool, high-key white light. The aesthetic is ultra-modern, minimalist, and clinical, emphasizing order and structural precision. Deep shadows are absent; instead, subtle tonal shifts in whites and light grays define the geometric server racks. A subtle blue accent light hints at activity. The mood is silent, powerful, and deeply reliable." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9libMJ6AMkNyTla3ol7u1gfX65Llvc2gRgnjuTZEzF1nqW6NPkK_XtGGDDjy8Ny70ufTX2Goup1CrmxCxe4ELawPd6v3wyvcgZOIFoIxGQpWSEwDDsggX2AoGGkCq8oW2nrU8gygV9U5WmAs8GDzOdndBnl2fyAzHrwDYDuPvsjlneQnIF-SEgzACThXSvu9C4PddXjlcJEeVhFbFj3TlL3o_-EHfNoCIXbvD_jI5duqFGQTSsIYn')">
+<div class="absolute inset-0 border border-outline-variant/20 rounded-xl pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Mission / Values -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-[120px]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl reveal-up">
+<div class="md:col-span-4">
+<h2 class="font-h2 text-h2 text-on-surface">Core<br/>Principles</h2>
+</div>
+<div class="md:col-span-8 flex items-end">
+<p class="font-body-lg text-body-lg text-on-surface-variant border-l border-outline-variant/30 pl-lg">
+                        Our work is governed by a strict adherence to these functional tenets. We do not compromise on structural integrity.
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up">
+<!-- Value 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl hover:border-primary/50 transition-colors">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary-container">architecture</span>
+</div>
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Architectural Discipline</h3>
+<p class="font-body text-body text-on-surface-variant">We build on a foundation of proven patterns, prioritizing stability and maintainability over ephemeral trends.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl hover:border-primary/50 transition-colors">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary-container">speed</span>
+</div>
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Uncompromising Performance</h3>
+<p class="font-body text-body text-on-surface-variant">Every millisecond is optimized. We engineer systems that remain responsive under intense institutional load.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl hover:border-primary/50 transition-colors">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary-container">visibility</span>
+</div>
+<h3 class="font-h4 text-h4 text-on-surface mb-sm">Editorial Clarity</h3>
+<p class="font-body text-body text-on-surface-variant">Data is only valuable if understood. We design interfaces that present complex information with stark precision.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-on-surface dark:bg-surface-container-lowest border-t border-outline-variant/10 mt-xl">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl flex flex-col md:flex-row justify-between gap-lg">
+<div class="flex flex-col gap-sm">
+<div class="font-h3 text-h3 text-surface-bright tracking-tighter">PRECISION</div>
+<div class="font-label text-label uppercase tracking-widest text-outline-variant mt-auto">© 2024 PRECISION TECHNOLOGY GROUP. ALL RIGHTS RESERVED.</div>
+</div>
+<nav class="flex flex-wrap gap-md md:gap-lg md:justify-end">
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Strategy</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Design</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Development</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">AI</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Work</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Insights</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Privacy</a>
+<a class="font-label text-label uppercase tracking-widest text-outline-variant hover:text-surface-bright transition-colors hover:text-primary-fixed-dim" href="#">Terms</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
