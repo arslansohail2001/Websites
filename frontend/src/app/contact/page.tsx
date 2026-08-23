@@ -141,7 +141,7 @@ export default function Contact() {
             <div className="space-y-xl">
               <div>
                 <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">General Inquiries</h3>
-                <a className="font-h4 text-h4 text-on-surface hover:text-primary transition-colors block" href="mailto:hello@precisiontech.com">hello@precisiontech.com</a>
+                <a className="font-h4 text-h4 text-on-surface hover:text-primary transition-colors block" href="mailto:hello@fill.com">hello@fill.com</a>
               </div>
               <div>
                 <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">Global Headquarters</h3>

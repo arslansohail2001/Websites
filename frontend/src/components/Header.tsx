@@ -36,7 +36,7 @@ export default function Header() {
       }`}>
         <Link href="/" className="flex items-center gap-xs">
           <span className={`material-symbols-outlined transition-colors ${isSolidMode ? "text-primary" : "text-white"}`}>grid_view</span>
-          <span className={`font-h4 text-h4 font-extrabold tracking-tighter transition-colors ${isSolidMode ? "text-on-surface" : "text-white"}`}>PRECISION</span>
+          <span className={`font-h4 text-h4 font-extrabold tracking-tighter transition-colors ${isSolidMode ? "text-on-surface" : "text-white"}`}>FILL</span>
         </Link>
         <nav className="hidden md:flex items-center gap-md">
           {navLinks.map((link) => {
