@@ -79,12 +79,12 @@ module.exports = {
         "container-max": "clamp(1280px, 85vw, 2560px)"
       },
       fontFamily: {
-        "h1": ["Space Grotesk", "sans-serif"],
-        "h2": ["Space Grotesk", "sans-serif"],
-        "h3": ["Space Grotesk", "sans-serif"],
-        "h4": ["Space Grotesk", "sans-serif"],
-        "data-display": ["Space Grotesk", "sans-serif"],
-        "h1-mobile": ["Space Grotesk", "sans-serif"],
+        "h1": ["Inter", "sans-serif"],
+        "h2": ["Inter", "sans-serif"],
+        "h3": ["Inter", "sans-serif"],
+        "h4": ["Inter", "sans-serif"],
+        "data-display": ["Inter", "sans-serif"],
+        "h1-mobile": ["Inter", "sans-serif"],
         "body-lg": ["Inter", "sans-serif"],
         "body": ["Inter", "sans-serif"],
         "small": ["Inter", "sans-serif"],

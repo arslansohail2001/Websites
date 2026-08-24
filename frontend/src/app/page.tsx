@@ -1,4 +1,53 @@
 import Link from "next/link";
+import { Timeline } from "@/components/ui/timeline";
+
+const capabilitiesData = [
+  {
+    title: "Strategy",
+    content: (
+      <div>
+        <p className="text-on-surface-variant font-body mb-6 text-lg max-w-xl">
+          We align technology with your business goals to ensure scalable, future-proof foundations.
+        </p>
+        <div className="flex flex-wrap gap-3 mb-8">
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Digital Transformation</span>
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Product Strategy</span>
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Technical Architecture</span>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Design",
+    content: (
+      <div>
+        <p className="text-on-surface-variant font-body mb-6 text-lg max-w-xl">
+          Crafting intuitive, premium user experiences that drive engagement and retention.
+        </p>
+        <div className="flex flex-wrap gap-3 mb-8">
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">UI/UX Design</span>
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Design Systems</span>
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Prototyping</span>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Development",
+    content: (
+      <div>
+        <p className="text-on-surface-variant font-body mb-6 text-lg max-w-xl">
+          Engineering robust, high-performance applications leveraging the latest web technologies.
+        </p>
+        <div className="flex flex-wrap gap-3 mb-8">
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Web Apps</span>
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Mobile Apps</span>
+           <span className="px-4 py-2 rounded-full border border-outline-variant/50 text-small font-small bg-surface-container-lowest text-on-surface">Cloud Infrastructure</span>
+        </div>
+      </div>
+    )
+  }
+];
 
 export default function Home() {
   return (
@@ -47,95 +96,29 @@ export default function Home() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-2xl max-w-container-max mx-auto px-margin-mobile md:px-gutter border-b border-outline-variant/30">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl">
-          <div className="md:col-span-12">
-            <span className="font-label text-label uppercase tracking-widest text-outline">CAPABILITIES</span>
-          </div>
-        </div>
-        <div className="flex flex-col border-t border-outline-variant/30">
-          {/* Row 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter py-lg border-b border-outline-variant/30 group hover:bg-surface-variant/30 transition-colors cursor-pointer">
-            <div className="md:col-span-1 flex items-center">
-              <span className="font-h4 text-h4 text-outline group-hover:text-primary transition-colors">01</span>
-            </div>
-            <div className="md:col-span-4 flex items-center">
-              <h3 className="font-h3 text-h3 text-on-surface">Strategy</h3>
-            </div>
-            <div className="md:col-span-6 flex items-center">
-              <p className="font-body text-body text-on-surface-variant">Digital Transformation • Product Strategy • Technical Architecture</p>
-            </div>
-            <div className="md:col-span-1 flex items-center justify-end">
-              <span className="material-symbols-outlined text-outline group-hover:text-primary transition-colors transform group-hover:translate-x-2">arrow_forward</span>
-            </div>
-          </div>
-          {/* Row 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter py-lg border-b border-outline-variant/30 group hover:bg-surface-variant/30 transition-colors cursor-pointer">
-            <div className="md:col-span-1 flex items-center">
-              <span className="font-h4 text-h4 text-outline group-hover:text-primary transition-colors">02</span>
-            </div>
-            <div className="md:col-span-4 flex items-center">
-              <h3 className="font-h3 text-h3 text-on-surface">Design</h3>
-            </div>
-            <div className="md:col-span-6 flex items-center">
-              <p className="font-body text-body text-on-surface-variant">UI/UX Design • Design Systems • Prototyping</p>
-            </div>
-            <div className="md:col-span-1 flex items-center justify-end">
-              <span className="material-symbols-outlined text-outline group-hover:text-primary transition-colors transform group-hover:translate-x-2">arrow_forward</span>
-            </div>
-          </div>
-          {/* Row 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter py-lg border-b border-outline-variant/30 group hover:bg-surface-variant/30 transition-colors cursor-pointer">
-            <div className="md:col-span-1 flex items-center">
-              <span className="font-h4 text-h4 text-outline group-hover:text-primary transition-colors">03</span>
-            </div>
-            <div className="md:col-span-4 flex items-center">
-              <h3 className="font-h3 text-h3 text-on-surface">Development</h3>
-            </div>
-            <div className="md:col-span-6 flex items-center">
-              <p className="font-body text-body text-on-surface-variant">Web Apps • Mobile Apps • Cloud Infrastructure</p>
-            </div>
-            <div className="md:col-span-1 flex items-center justify-end">
-              <span className="material-symbols-outlined text-outline group-hover:text-primary transition-colors transform group-hover:translate-x-2">arrow_forward</span>
-            </div>
-          </div>
-          {/* Row 4 */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter py-lg border-b border-outline-variant/30 group hover:bg-surface-variant/30 transition-colors cursor-pointer">
-            <div className="md:col-span-1 flex items-center">
-              <span className="font-h4 text-h4 text-outline group-hover:text-primary transition-colors">04</span>
-            </div>
-            <div className="md:col-span-4 flex items-center">
-              <h3 className="font-h3 text-h3 text-on-surface">AI</h3>
-            </div>
-            <div className="md:col-span-6 flex items-center">
-              <p className="font-body text-body text-on-surface-variant">Machine Learning • Data Engineering • LLM Integration</p>
-            </div>
-            <div className="md:col-span-1 flex items-center justify-end">
-              <span className="material-symbols-outlined text-outline group-hover:text-primary transition-colors transform group-hover:translate-x-2">arrow_forward</span>
-            </div>
-          </div>
-        </div>
+      <section className="border-b border-outline-variant/30">
+        <Timeline data={capabilitiesData} />
       </section>
 
       {/* Selected Work Section */}
       <section className="py-2xl max-w-container-max mx-auto px-margin-mobile md:px-gutter border-b border-outline-variant/30">
         <div className="flex justify-between items-end mb-xl">
           <span className="font-label text-label uppercase tracking-widest text-outline">SELECTED WORK</span>
-          <a className="font-small text-small text-primary hover:underline flex items-center gap-xs" href="#">
+          <Link className="font-small text-small text-primary hover:underline flex items-center gap-xs" href="/work">
             View All Work <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-xl">
           {/* Work 1 */}
           <div className="group cursor-pointer">
-            <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWmwlQEDVmWk9V5czp68WwNfKYec_DtJJFO5Ugqob_Z5j0_n-QaA15CBEhGqUAgbQK-QpTROdSI5gELxCtuRdfYj_vR2qwbGCdNbRm-xCcIyy3AsGwudQUcIsvXXeQAMMlhjpOpvEsvkcgKdLq4E8gxtEn8hAJevbnSJd5ZdCKWVVSPlHQqBcCe_l-VynS4CFvob0eTvI9lNA6fxGkNO2D9gFvM4iJ-7G0jcmjX43YJzetoXTebrCi')" }}></div>
+            <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('/images/nova_dashboard.jpg')" }}></div>
             <h3 className="font-h4 text-h4 text-on-surface mb-xs">Nova Financial Platform</h3>
             <p className="font-body text-body text-on-surface-variant mb-xs">A complete overhaul of a legacy banking system.</p>
             <span className="font-label text-label text-outline uppercase">FINANCE</span>
           </div>
           {/* Work 2 (Offset) */}
           <div className="group cursor-pointer md:mt-2xl">
-            <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAt1_KviqalD9cnhNOdF20LyyB9XtTZWQnfKQOosdR0JliW-uASv3CpXX39Dfups_F4O8Q8NCW1JlFcAEpqDFE-B0p70b1Ee_zX4rSXVVRm3Gg7TvTd09SYY-R-KTdccfTfznKyU-ZLwvT5aJO33KxMOADTAwSVAzeX9_4zR3gNDr7lXyVhdQI8abFprEXm8PVcPs2a24dImMIh4Ob5U41vTEA6oDZrizCREjDjklMierrRj-Njvv1t')" }}></div>
+            <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('/images/aura_intelligence.jpg')" }}></div>
             <h3 className="font-h4 text-h4 text-on-surface mb-xs">Aura Intelligence</h3>
             <p className="font-body text-body text-on-surface-variant mb-xs">Predictive analytics engine for supply chain management.</p>
             <span className="font-label text-label text-outline uppercase">LOGISTICS</span>

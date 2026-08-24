@@ -1,14 +1,12 @@
+import IntroAnimation from "@/components/ui/scroll-morph-hero";
+
 export default function Work() {
   return (
     <main className="pt-24 pb-xl flex-grow">
       {/* Hero Section */}
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl">
-        <div className="max-w-4xl">
-          <h1 className="font-h1-mobile md:font-h1 text-h1-mobile md:text-h1 text-on-surface mb-lg">Work that moves businesses forward.</h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">We partner with enterprise organizations to design and engineer digital platforms that define modern capability. Our approach blends technical rigor with editorial precision.</p>
-        </div>
+      <section className="w-full h-[800px] mb-xl rounded-b-3xl overflow-hidden border-b border-outline-variant/20">
+        <IntroAnimation />
       </section>
-
       {/* Filters */}
       <section className="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-xl sticky top-[64px] z-40 bg-surface/90 backdrop-blur-sm py-4 border-b border-outline-variant/20 overflow-x-auto no-scrollbar">
         <div className="flex gap-sm whitespace-nowrap">

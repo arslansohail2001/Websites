@@ -15,7 +15,7 @@ export default function About() {
           </div>
         </div>
         <div className="mt-xl reveal-up">
-          <div className="w-full h-[400px] md:h-[600px] bg-cover bg-center bg-surface-container-high rounded-xl overflow-hidden relative" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9libMJ6AMkNyTla3ol7u1gfX65Llvc2gRgnjuTZEzF1nqW6NPkK_XtGGDDjy8Ny70ufTX2Goup1CrmxCxe4ELawPd6v3wyvcgZOIFoIxGQpWSEwDDsggX2AoGGkCq8oW2nrU8gygV9U5WmAs8GDzOdndBnl2fyAzHrwDYDuPvsjlneQnIF-SEgzACThXSvu9C4PddXjlcJEeVhFbFj3TlL3o_-EHfNoCIXbvD_jI5duqFGQTSsIYn')" }}>
+          <div className="w-full h-[400px] md:h-[600px] bg-cover bg-center bg-surface-container-high rounded-xl overflow-hidden relative" style={{ backgroundImage: "url('/images/server_room.jpg')" }}>
             <div className="absolute inset-0 border border-outline-variant/20 rounded-xl pointer-events-none"></div>
           </div>
         </div>

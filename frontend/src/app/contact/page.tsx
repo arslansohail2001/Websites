@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,30 @@ export default function Contact() {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [isTyping, setIsTyping] = useState(false);
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const [eyePos, setEyePos] = useState({ x: 0, y: 0 });
+  const [blink, setBlink] = useState(false);
+
+  useEffect(() => {
+    const handleMouse = (e: MouseEvent) => setCursor({ x: e.clientX, y: e.clientY });
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
+  }, []);
+
+  useEffect(() => {
+    const offsetX = ((cursor.x / window.innerWidth) - 0.5) * 40;
+    const offsetY = ((cursor.y / window.innerHeight) - 0.5) * 20;
+    setEyePos({ x: offsetX, y: offsetY });
+  }, [cursor]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBlink(true);
+      setTimeout(() => setBlink(false), 200);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -67,6 +91,52 @@ export default function Contact() {
                 Oops! Something went wrong. Please try again later.
               </div>
             )}
+
+            <div className="flex justify-center mb-8">
+              {/* Cartoon Face */}
+              <div className="relative w-[280px] h-[160px] rounded-2xl overflow-hidden shadow-lg border border-outline-variant/30 bg-surface-container-low">
+                <img
+                  src="https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/cloud.jpg"
+                  alt="cartoon cloud"
+                  className="w-full h-full object-cover"
+                />
+
+                {["left", "right"].map((side, idx) => (
+                  <div
+                    key={side}
+                    className="absolute flex justify-center items-end overflow-hidden"
+                    style={{
+                      top: 60,
+                      left: idx === 0 ? 80 : 160,
+                      width: 28,
+                      height: isTyping
+                        ? 4 // fully closed when typing details
+                        : blink
+                        ? 6 // temporary blink
+                        : 40, // open eye
+                      borderRadius: isTyping || blink ? "2px" : "50% / 60%",
+                      backgroundColor: isTyping ? "black" : "white",
+                      transition: "all 0.15s ease",
+                    }}
+                  >
+                    {!isTyping && (
+                      <div
+                        className="bg-black"
+                        style={{
+                          width: 16,
+                          height: 16,
+                          borderRadius: "50%",
+                          marginBottom: 4,
+                          transform: `translate(${eyePos.x}px, ${eyePos.y}px)`,
+                          transition: "all 0.1s ease",
+                        }}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-lg">
               {/* Row 1: Name & Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
@@ -121,7 +191,7 @@ export default function Contact() {
               {/* Row 4: Details */}
               <div className="space-y-xs">
                 <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="message">Project Details</label>
-                <textarea className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your objectives, timeline, and current challenges..." rows={5} required></textarea>
+                <textarea className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => setIsTyping(true)} onBlur={() => setIsTyping(false)} placeholder="Tell us about your objectives, timeline, and current challenges..." rows={5} required></textarea>
               </div>
 
               {/* Submit CTA */}
