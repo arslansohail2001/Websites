@@ -116,8 +116,8 @@ export default function Home() {
             <p className="font-body text-body text-on-surface-variant mb-xs">A complete overhaul of a legacy banking system.</p>
             <span className="font-label text-label text-outline uppercase">FINANCE</span>
           </div>
-          {/* Work 2 (Offset) */}
-          <div className="group cursor-pointer md:mt-2xl">
+          {/* Work 2 */}
+          <div className="group cursor-pointer">
             <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('/images/aura_intelligence.jpg')" }}></div>
             <h3 className="font-h4 text-h4 text-on-surface mb-xs">Aura Intelligence</h3>
             <p className="font-body text-body text-on-surface-variant mb-xs">Predictive analytics engine for supply chain management.</p>

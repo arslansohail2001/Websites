@@ -34,9 +34,9 @@ export default function Header() {
           ? "bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg border border-black/10 dark:border-white/10" 
           : "bg-white/5 backdrop-blur-md border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]"
       }`}>
-        <Link href="/" className="flex items-center gap-xs">
-          <span className={`material-symbols-outlined transition-colors ${isSolidMode ? "text-primary" : "text-white"}`}>grid_view</span>
-          <span className={`font-h4 text-h4 font-extrabold tracking-tighter transition-colors ${isSolidMode ? "text-on-surface" : "text-white"}`}>FILL</span>
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/images/logo.png" alt="Fill Logo" className={`h-8 w-auto object-contain transition-all ${isSolidMode ? "" : "brightness-0 invert"}`} />
+          <span className={`font-h4 text-h4 font-extrabold tracking-tighter transition-colors ${isSolidMode ? "text-[#00346b]" : "text-white"}`}>FILL</span>
         </Link>
         <nav className="hidden md:flex items-center gap-md">
           {navLinks.map((link) => {
