@@ -206,21 +206,12 @@ export default function Contact() {
         </div>
 
         {/* Right Column: Contact Info */}
-        <div className="md:col-span-5 lg:col-span-4 flex flex-col gap-lg">
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md md:p-lg h-full flex flex-col justify-between">
+        <div className="md:col-span-5 lg:col-span-4 flex flex-col gap-lg pt-4">
+          <div className="h-full flex flex-col justify-between">
             <div className="space-y-xl">
               <div>
                 <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">General Inquiries</h3>
-                <a className="font-h4 text-h4 text-on-surface hover:text-primary transition-colors block" href="mailto:hello@fill.com">hello@fill.com</a>
-              </div>
-              <div>
-                <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">Global Headquarters</h3>
-                <address className="not-italic font-body text-body text-on-surface">
-                  100 Innovation Drive<br />
-                  Suite 400<br />
-                  San Francisco, CA 94103<br />
-                  United States
-                </address>
+                <a className="font-h4 text-h4 text-on-surface hover:text-primary transition-colors block" href="mailto:hello@filltechnology.com">hello@filltechnology.com</a>
               </div>
               <div>
                 <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">Connect</h3>

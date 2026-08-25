@@ -65,9 +65,8 @@ export function Footer() {
 
 			<div className="grid w-full max-w-6xl mx-auto gap-8 xl:grid-cols-3 xl:gap-8 relative z-10">
 				<AnimatedContainer className="space-y-4">
-					<div className="flex items-center gap-2">
-            <img src="/images/logo.png" alt="Fill Logo" className="h-8 w-auto object-contain brightness-0 invert" />
-            <span className="font-h4 text-2xl font-extrabold tracking-tighter text-white">FILL</span>
+					<div className="flex items-center">
+            <img src="/images/fill-logo-official.png" alt="Fill Logo" className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-90" />
           </div>
 					<p className="text-white/50 mt-8 text-sm md:mt-0">
 						© {new Date().getFullYear()} FILL. All rights reserved.

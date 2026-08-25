@@ -1,5 +1,7 @@
 import Link from "next/link";
+import HomepageProjects from "@/components/ui/homepage-projects";
 import { Timeline } from "@/components/ui/timeline";
+import { projects } from "@/data/projects";
 
 const capabilitiesData = [
   {
@@ -108,22 +110,7 @@ export default function Home() {
             View All Work <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-xl">
-          {/* Work 1 */}
-          <div className="group cursor-pointer">
-            <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('/images/nova_dashboard.jpg')" }}></div>
-            <h3 className="font-h4 text-h4 text-on-surface mb-xs">Nova Financial Platform</h3>
-            <p className="font-body text-body text-on-surface-variant mb-xs">A complete overhaul of a legacy banking system.</p>
-            <span className="font-label text-label text-outline uppercase">FINANCE</span>
-          </div>
-          {/* Work 2 */}
-          <div className="group cursor-pointer">
-            <div className="bg-cover bg-center w-full aspect-[4/3] rounded-lg mb-md bg-surface-variant border border-outline-variant/30" style={{ backgroundImage: "url('/images/aura_intelligence.jpg')" }}></div>
-            <h3 className="font-h4 text-h4 text-on-surface mb-xs">Aura Intelligence</h3>
-            <p className="font-body text-body text-on-surface-variant mb-xs">Predictive analytics engine for supply chain management.</p>
-            <span className="font-label text-label text-outline uppercase">LOGISTICS</span>
-          </div>
-        </div>
+        <HomepageProjects projects={projects.slice(0, 4)} />
       </section>
 
       {/* Expertise Section (Dark) */}
