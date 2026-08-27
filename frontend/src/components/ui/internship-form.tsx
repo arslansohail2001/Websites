@@ -107,8 +107,7 @@ export default function InternshipForm() {
     
     setIsSubmitting(true);
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
-      const res = await fetch(`${API_URL}/internship`, {
+      const res = await fetch("/api/internship", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
