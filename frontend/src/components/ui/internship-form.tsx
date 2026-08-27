@@ -48,6 +48,7 @@ export default function InternshipForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [showErrors, setShowErrors] = useState(false);
   
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -81,42 +82,76 @@ export default function InternshipForm() {
   };
 
   const nextStep = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep((prev) => prev + 1);
+    if (isStepValid()) {
+      setShowErrors(false);
+      if (currentStep < steps.length - 1) {
+        setCurrentStep((prev) => prev + 1);
+      }
+    } else {
+      setShowErrors(true);
     }
   };
 
   const prevStep = () => {
+    setShowErrors(false);
     if (currentStep > 0) {
       setCurrentStep((prev) => prev - 1);
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    if (!isStepValid()) {
+      setShowErrors(true);
+      return;
+    }
+    
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const res = await fetch(`${API_URL}/internship`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to submit. Check your connection or try again later.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-    }, 1500);
+    }
   };
 
   // Check if step is valid for next button
   const isStepValid = () => {
     switch (currentStep) {
       case 0:
-        return formData.name.trim() !== "" && formData.email.trim() !== "";
+        return formData.name.trim() !== "" && 
+               formData.email.trim() !== "" && 
+               formData.email.toLowerCase().includes("@gmail.com") &&
+               formData.linkedin.trim() !== "" && 
+               formData.linkedin.includes("linkedin.com");
       case 1:
-        return formData.degree.trim() !== "" && formData.university.trim() !== "";
+        return formData.degree.trim() !== "" && formData.university.trim() !== "" && formData.gradYear !== "";
       case 2:
         return formData.interestArea !== "" && formData.skills.length > 0;
       case 3:
-        return formData.projectDescription.trim() !== "";
+        return formData.portfolio.trim() !== "" &&
+               formData.portfolio.toLowerCase().includes("github.com") &&
+               formData.projectDescription.trim() !== "";
       case 4:
         return formData.startDate !== "" && formData.duration !== "";
       default:
         return true;
     }
+  };
+
+  const getErrorClass = (condition: boolean) => {
+    return showErrors && condition ? "border-red-500 ring-2 ring-red-500/20" : "border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20";
   };
 
   if (submitted) {
@@ -230,17 +265,22 @@ export default function InternshipForm() {
                           placeholder="Jane Doe"
                           value={formData.name}
                           onChange={(e) => updateFormData("name", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.name.trim() === ""))}
                         />
                       </motion.div>
                       <motion.div variants={fadeInUp} className="space-y-1.5">
-                        <label className="text-sm font-medium text-gray-700">Email Address *</label>
+                        <label className="text-sm font-medium text-gray-700 flex justify-between">
+                          <span>Gmail Address *</span>
+                          {showErrors && (!formData.email.toLowerCase().includes("@gmail.com") || formData.email.trim() === "") && (
+                            <span className="text-red-500 text-xs">Valid Gmail required</span>
+                          )}
+                        </label>
                         <input
                           type="email"
-                          placeholder="jane@university.edu"
+                          placeholder="jane@gmail.com"
                           value={formData.email}
                           onChange={(e) => updateFormData("email", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.email.trim() === "" || !formData.email.toLowerCase().includes("@gmail.com")))}
                         />
                       </motion.div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -255,13 +295,18 @@ export default function InternshipForm() {
                           />
                         </motion.div>
                         <motion.div variants={fadeInUp} className="space-y-1.5">
-                          <label className="text-sm font-medium text-gray-700">LinkedIn URL</label>
+                          <label className="text-sm font-medium text-gray-700 flex justify-between">
+                            <span>LinkedIn URL *</span>
+                            {showErrors && (!formData.linkedin.includes("linkedin.com") || formData.linkedin.trim() === "") && (
+                              <span className="text-red-500 text-xs">Valid LinkedIn URL required</span>
+                            )}
+                          </label>
                           <input
                             type="url"
                             placeholder="linkedin.com/in/janedoe"
                             value={formData.linkedin}
                             onChange={(e) => updateFormData("linkedin", e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
+                            className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.linkedin.trim() === "" || !formData.linkedin.includes("linkedin.com")))}
                           />
                         </motion.div>
                       </div>
@@ -284,7 +329,7 @@ export default function InternshipForm() {
                           placeholder="e.g. B.S. Computer Science"
                           value={formData.degree}
                           onChange={(e) => updateFormData("degree", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.degree.trim() === ""))}
                         />
                       </motion.div>
                       <motion.div variants={fadeInUp} className="space-y-1.5">
@@ -294,7 +339,7 @@ export default function InternshipForm() {
                           placeholder="e.g. Stanford University"
                           value={formData.university}
                           onChange={(e) => updateFormData("university", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.university.trim() === ""))}
                         />
                       </motion.div>
                       <motion.div variants={fadeInUp} className="space-y-1.5">
@@ -302,7 +347,7 @@ export default function InternshipForm() {
                         <select
                           value={formData.gradYear}
                           onChange={(e) => updateFormData("gradYear", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all bg-white"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all bg-white", getErrorClass(formData.gradYear === ""))}
                         >
                           <option value="" disabled>Select a year</option>
                           <option value="2024">2024</option>
@@ -337,7 +382,8 @@ export default function InternshipForm() {
                               key={area.value}
                               className={cn(
                                 "flex items-center space-x-3 p-4 border rounded-xl cursor-pointer transition-all hover:bg-gray-50",
-                                formData.interestArea === area.value ? "border-[#00346b] bg-blue-50/50 ring-1 ring-[#00346b]" : "border-gray-200"
+                                formData.interestArea === area.value ? "border-[#00346b] bg-blue-50/50 ring-1 ring-[#00346b]" : "border-gray-200",
+                                showErrors && formData.interestArea === "" && "border-red-500"
                               )}
                             >
                               <input 
@@ -356,7 +402,7 @@ export default function InternshipForm() {
                       
                       <motion.div variants={fadeInUp} className="space-y-3">
                         <label className="text-sm font-medium text-gray-700">Key Technologies / Skills *</label>
-                        <div className="flex flex-wrap gap-2">
+                        <div className={cn("flex flex-wrap gap-2 p-2 rounded-xl border", showErrors && formData.skills.length === 0 ? "border-red-500" : "border-transparent")}>
                           {[
                             "React / Next.js", "TypeScript", "Python", "Node.js", 
                             "Go", "Docker", "Figma", "Tailwind CSS", "SQL", "Machine Learning"
@@ -393,13 +439,18 @@ export default function InternshipForm() {
                     </div>
                     <div className="space-y-5">
                       <motion.div variants={fadeInUp} className="space-y-1.5">
-                        <label className="text-sm font-medium text-gray-700">Portfolio or GitHub URL</label>
+                        <label className="text-sm font-medium text-gray-700 flex justify-between">
+                          <span>GitHub URL *</span>
+                          {showErrors && (!formData.portfolio.toLowerCase().includes("github.com") || formData.portfolio.trim() === "") && (
+                            <span className="text-red-500 text-xs">Valid GitHub URL required</span>
+                          )}
+                        </label>
                         <input
                           type="url"
                           placeholder="github.com/janedoe"
                           value={formData.portfolio}
                           onChange={(e) => updateFormData("portfolio", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.portfolio.trim() === "" || !formData.portfolio.toLowerCase().includes("github.com")))}
                         />
                       </motion.div>
                       <motion.div variants={fadeInUp} className="space-y-1.5">
@@ -408,7 +459,7 @@ export default function InternshipForm() {
                           placeholder="Describe a recent project, your role in it, and the technologies used."
                           value={formData.projectDescription}
                           onChange={(e) => updateFormData("projectDescription", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all min-h-[120px] resize-y"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all min-h-[120px] resize-y", getErrorClass(formData.projectDescription.trim() === ""))}
                         />
                       </motion.div>
                     </div>
@@ -429,7 +480,7 @@ export default function InternshipForm() {
                           type="date"
                           value={formData.startDate}
                           onChange={(e) => updateFormData("startDate", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all bg-white"
+                          className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all bg-white", getErrorClass(formData.startDate === ""))}
                         />
                       </motion.div>
                       <motion.div variants={fadeInUp} className="space-y-3">
@@ -444,7 +495,8 @@ export default function InternshipForm() {
                               key={duration.value}
                               className={cn(
                                 "flex items-center space-x-3 p-4 border rounded-xl cursor-pointer transition-all hover:bg-gray-50",
-                                formData.duration === duration.value ? "border-[#00346b] bg-blue-50/50 ring-1 ring-[#00346b]" : "border-gray-200"
+                                formData.duration === duration.value ? "border-[#00346b] bg-blue-50/50 ring-1 ring-[#00346b]" : "border-gray-200",
+                                showErrors && formData.duration === "" && "border-red-500"
                               )}
                             >
                               <input 
@@ -485,10 +537,10 @@ export default function InternshipForm() {
             <button
               type="button"
               onClick={currentStep === steps.length - 1 ? handleSubmit : nextStep}
-              disabled={!isStepValid() || isSubmitting}
+              disabled={isSubmitting}
               className={cn(
                 "flex items-center gap-2 px-6 py-2.5 rounded-full font-medium transition-all shadow-sm",
-                !isStepValid() || isSubmitting
+                isSubmitting
                   ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                   : "bg-[#00346b] hover:bg-[#002855] text-white hover:shadow-md"
               )}

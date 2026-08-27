@@ -8,13 +8,14 @@ export async function connectToDatabase() {
     return dbInstance;
   }
   
-  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/precision_tech';
+  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
   client = new MongoClient(uri);
   
   try {
     await client.connect();
     console.log('Successfully connected to MongoDB Atlas!');
-    dbInstance = client.db();
+    // The user is looking at the 'test' database in Atlas
+    dbInstance = client.db('test'); 
     return dbInstance;
   } catch (error) {
     console.error('Failed to connect to MongoDB Atlas:', error);

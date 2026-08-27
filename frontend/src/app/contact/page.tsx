@@ -12,6 +12,7 @@ export default function Contact() {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [showErrors, setShowErrors] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [eyePos, setEyePos] = useState({ x: 0, y: 0 });
@@ -44,9 +45,17 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setShowErrors(true);
+      return;
+    }
+    setShowErrors(false);
+    
     setStatus("loading");
     try {
-      const res = await fetch("http://localhost:3001/contact", {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const res = await fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -137,16 +146,16 @@ export default function Contact() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-lg">
+            <form onSubmit={handleSubmit} className="space-y-lg" noValidate>
               {/* Row 1: Name & Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div className="space-y-xs">
-                  <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="name">Full Name</label>
-                  <input className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Jane Doe" required type="text" />
+                  <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="name">Full Name *</label>
+                  <input className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.name.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Jane Doe" required type="text" />
                 </div>
                 <div className="space-y-xs">
-                  <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="email">Work Email</label>
-                  <input className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="jane@company.com" required type="email" />
+                  <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="email">Work Email *</label>
+                  <input className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.email.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="email" name="email" value={formData.email} onChange={handleChange} placeholder="jane@company.com" required type="email" />
                 </div>
               </div>
 
@@ -190,8 +199,8 @@ export default function Contact() {
 
               {/* Row 4: Details */}
               <div className="space-y-xs">
-                <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="message">Project Details</label>
-                <textarea className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => setIsTyping(true)} onBlur={() => setIsTyping(false)} placeholder="Tell us about your objectives, timeline, and current challenges..." rows={5} required></textarea>
+                <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="message">Project Details *</label>
+                <textarea className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.message.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => setIsTyping(true)} onBlur={() => setIsTyping(false)} placeholder="Tell us about your objectives, timeline, and current challenges..." rows={5} required></textarea>
               </div>
 
               {/* Submit CTA */}
