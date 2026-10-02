@@ -3,7 +3,7 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 interface FooterLink {
 	title: string;
@@ -49,8 +49,7 @@ const footerLinks: FooterSection[] = [
 		links: [
 			{ title: 'Facebook', href: '#', icon: FaFacebook },
 			{ title: 'Instagram', href: '#', icon: FaInstagram },
-			{ title: 'Youtube', href: '#', icon: FaYoutube },
-			{ title: 'LinkedIn', href: '#', icon: FaLinkedin },
+			{ title: 'LinkedIn', href: 'https://www.linkedin.com/in/fill-tech-1b8219433', icon: FaLinkedin },
 		],
 	},
 ];
