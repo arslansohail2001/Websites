@@ -1,4 +1,5 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '../auth/auth.guard';
 import { InternshipService } from './internship.service';
 
 @Controller('internship')
@@ -11,6 +12,7 @@ export class InternshipController {
     return { success: true, message: 'Application received successfully.' };
   }
 
+  @UseGuards(AuthGuard)
   @Get()
   async findAll() {
     return this.internshipService.findAll();

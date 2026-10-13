@@ -261,7 +261,6 @@ export default function InternshipForm() {
                         <label className="text-sm font-medium text-gray-700">Full Name *</label>
                         <input
                           type="text"
-                          placeholder="Jane Doe"
                           value={formData.name}
                           onChange={(e) => updateFormData("name", e.target.value)}
                           className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.name.trim() === ""))}
@@ -276,7 +275,6 @@ export default function InternshipForm() {
                         </label>
                         <input
                           type="email"
-                          placeholder="jane@gmail.com"
                           value={formData.email}
                           onChange={(e) => updateFormData("email", e.target.value)}
                           className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.email.trim() === "" || !formData.email.toLowerCase().includes("@gmail.com")))}
@@ -287,7 +285,6 @@ export default function InternshipForm() {
                           <label className="text-sm font-medium text-gray-700">Phone Number</label>
                           <input
                             type="tel"
-                            placeholder="+1 (555) 000-0000"
                             value={formData.phone}
                             onChange={(e) => updateFormData("phone", e.target.value)}
                             className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#00346b] focus:ring-2 focus:ring-[#00346b]/20 outline-none transition-all"
@@ -302,7 +299,6 @@ export default function InternshipForm() {
                           </label>
                           <input
                             type="url"
-                            placeholder="linkedin.com/in/janedoe"
                             value={formData.linkedin}
                             onChange={(e) => updateFormData("linkedin", e.target.value)}
                             className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.linkedin.trim() === "" || !formData.linkedin.includes("linkedin.com")))}
@@ -325,7 +321,6 @@ export default function InternshipForm() {
                         <label className="text-sm font-medium text-gray-700">Current Degree Program *</label>
                         <input
                           type="text"
-                          placeholder="e.g. B.S. Computer Science"
                           value={formData.degree}
                           onChange={(e) => updateFormData("degree", e.target.value)}
                           className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.degree.trim() === ""))}
@@ -335,7 +330,6 @@ export default function InternshipForm() {
                         <label className="text-sm font-medium text-gray-700">University / Institution *</label>
                         <input
                           type="text"
-                          placeholder="e.g. Stanford University"
                           value={formData.university}
                           onChange={(e) => updateFormData("university", e.target.value)}
                           className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.university.trim() === ""))}
@@ -446,7 +440,6 @@ export default function InternshipForm() {
                         </label>
                         <input
                           type="url"
-                          placeholder="github.com/janedoe"
                           value={formData.portfolio}
                           onChange={(e) => updateFormData("portfolio", e.target.value)}
                           className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all", getErrorClass(formData.portfolio.trim() === "" || !formData.portfolio.toLowerCase().includes("github.com")))}
@@ -455,7 +448,6 @@ export default function InternshipForm() {
                       <motion.div variants={fadeInUp} className="space-y-1.5">
                         <label className="text-sm font-medium text-gray-700">Tell us about a project you're proud of *</label>
                         <textarea
-                          placeholder="Describe a recent project, your role in it, and the technologies used."
                           value={formData.projectDescription}
                           onChange={(e) => updateFormData("projectDescription", e.target.value)}
                           className={cn("w-full px-4 py-3 rounded-xl border outline-none transition-all min-h-[120px] resize-y", getErrorClass(formData.projectDescription.trim() === ""))}

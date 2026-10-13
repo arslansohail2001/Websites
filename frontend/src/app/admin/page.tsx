@@ -125,8 +125,7 @@ export default function AdminPage() {
                   type="text" 
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder-white/30 focus:outline-none focus:border-blue-500 focus:bg-white/[0.08] transition-all"
-                  placeholder="Enter admin username"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white focus:outline-none focus:border-blue-500 focus:bg-white/[0.08] transition-all"
                   required
                 />
               </div>
@@ -140,8 +139,7 @@ export default function AdminPage() {
                   type="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder-white/30 focus:outline-none focus:border-purple-500 focus:bg-white/[0.08] transition-all"
-                  placeholder="Enter your password"
+                  className="w-full bg-white/[0.04] border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white focus:outline-none focus:border-purple-500 focus:bg-white/[0.08] transition-all"
                   required
                 />
               </div>

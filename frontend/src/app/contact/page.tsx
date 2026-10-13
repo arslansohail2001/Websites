@@ -150,11 +150,11 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div className="space-y-xs">
                   <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="name">Full Name *</label>
-                  <input className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.name.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Jane Doe" required type="text" />
+                  <input className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.name.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="name" name="name" value={formData.name} onChange={handleChange} required type="text" />
                 </div>
                 <div className="space-y-xs">
                   <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="email">Work Email *</label>
-                  <input className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.email.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="email" name="email" value={formData.email} onChange={handleChange} placeholder="jane@company.com" required type="email" />
+                  <input className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.email.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="email" name="email" value={formData.email} onChange={handleChange} required type="email" />
                 </div>
               </div>
 
@@ -162,7 +162,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div className="space-y-xs">
                   <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="company">Company</label>
-                  <input className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Organization Name" type="text" />
+                  <input className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="company" name="company" value={formData.company} onChange={handleChange} type="text" />
                 </div>
                 <div className="space-y-xs">
                   <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="projectType">Project Type</label>
@@ -183,23 +183,21 @@ export default function Contact() {
 
               {/* Row 3: Budget */}
               <div className="space-y-xs">
-                <label className="font-label text-label text-on-surface uppercase tracking-widest block mb-sm">Estimated Budget (USD)</label>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-sm">
-                  {["50k-100k", "100k-250k", "250k-500k", "500k+"].map((val) => (
-                    <label key={val} className="cursor-pointer">
-                      <input className="peer sr-only" name="budget" type="radio" value={val} checked={formData.budget === val} onChange={handleChange} />
-                      <div className="h-[44px] flex items-center justify-center border border-outline-variant/30 rounded bg-surface-container-lowest peer-checked:border-primary-container peer-checked:bg-primary/10 peer-checked:text-primary transition-all font-small text-small text-on-surface-variant">
-                        ${val}
-                      </div>
-                    </label>
-                  ))}
-                </div>
+                <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="budget">Estimated Budget (USD)</label>
+                <input
+                  type="text"
+                  id="budget"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleChange}
+                  className="w-full border border-outline-variant/50 rounded-lg p-sm bg-surface-container-lowest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm text-on-surface transition-all"
+                />
               </div>
 
               {/* Row 4: Details */}
               <div className="space-y-xs">
                 <label className="font-label text-label text-on-surface uppercase tracking-widest block" htmlFor="message">Project Details *</label>
-                <textarea className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.message.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => setIsTyping(true)} onBlur={() => setIsTyping(false)} placeholder="Tell us about your objectives, timeline, and current challenges..." rows={5} required></textarea>
+                <textarea className={`w-full border rounded-lg p-sm bg-surface-container-lowest outline-none transition-all ${showErrors && !formData.message.trim() ? "border-red-500 ring-1 ring-red-500" : "border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary"}`} id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => setIsTyping(true)} onBlur={() => setIsTyping(false)} rows={5} required></textarea>
               </div>
 
               {/* Submit CTA */}
@@ -219,7 +217,7 @@ export default function Contact() {
             <div className="space-y-xl">
               <div>
                 <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">General Inquiries</h3>
-                <a className="font-h4 text-h4 text-on-surface hover:text-primary transition-colors block" href="mailto:hello@filltechnology.com">hello@filltechnology.com</a>
+                <a className="font-h4 text-h4 text-on-surface hover:text-primary transition-colors block" href="mailto:info@filltechnology.com">info@filltechnology.com</a>
               </div>
               <div>
                 <h3 className="font-label text-label text-on-surface uppercase tracking-widest mb-sm text-on-surface-variant">Connect</h3>
