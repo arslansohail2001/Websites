@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 544" width="680" height="544">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#21081A"/>
+      <stop offset="35%" stop-color="#4E1228"/>
+      <stop offset="65%" stop-color="#9C2742"/>
+      <stop offset="85%" stop-color="#D97736"/>
+      <stop offset="100%" stop-color="#FAD082"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D1426"/>
+      <stop offset="50%" stop-color="#240D1D"/>
+      <stop offset="100%" stop-color="#140610"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="50%" stop-color="#F5DE94"/>
+      <stop offset="100%" stop-color="#9E7D2E"/>
+    </linearGradient>
+    <linearGradient id="archGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A0815"/>
+      <stop offset="100%" stop-color="#1A0208"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#FFE8A3" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#E8823A" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#A62B46" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="680" height="544" fill="url(#skyGrad)"/>
+  <circle cx="340" cy="310" r="140" fill="url(#sunGlow)"/>
+
+  <!-- Sun -->
+  <circle cx="340" cy="310" r="32" fill="#FFF2CF" opacity="0.95"/>
+
+  <!-- Birds flocking -->
+  <path d="M220 180 Q226 175 232 180 Q238 175 244 180 Q238 178 232 182 Q226 178 220 180 Z" fill="#240713" opacity="0.6"/>
+  <path d="M250 160 Q255 156 260 160 Q265 156 270 160 Q265 158 260 162 Q255 158 250 160 Z" fill="#240713" opacity="0.5"/>
+  <path d="M410 190 Q415 186 420 190 Q425 186 430 190 Q425 188 420 192 Q415 188 410 190 Z" fill="#240713" opacity="0.6"/>
+  <path d="M435 175 Q439 171 443 175 Q447 171 451 175 Q447 173 443 177 Q439 173 435 175 Z" fill="#240713" opacity="0.5"/>
+
+  <!-- Distant Mountains -->
+  <path d="M0 340 Q160 290 320 330 T680 320 L680 400 L0 400 Z" fill="#5E162B" opacity="0.7"/>
+  <path d="M0 350 Q200 310 400 350 T680 340 L680 410 L0 410 Z" fill="#440D1D" opacity="0.85"/>
+
+  <!-- Mughal Palace Silhouette -->
+  <!-- Central Grand Dome -->
+  <path d="M340 220 C340 240 330 250 320 265 C310 280 310 295 310 320 L370 320 C370 295 370 280 360 265 C350 250 340 240 340 220 Z" fill="#260510"/>
+  <path d="M340 205 L340 220" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="340" cy="204" r="3.5" fill="url(#goldGrad)"/>
+
+  <!-- Left Secondary Dome -->
+  <path d="M260 250 C260 265 252 272 245 282 C238 292 238 305 238 325 L282 325 C282 305 282 292 275 282 C268 272 260 265 260 250 Z" fill="#260510"/>
+  <path d="M260 240 L260 250" stroke="url(#goldGrad)" stroke-width="2"/>
+
+  <!-- Right Secondary Dome -->
+  <path d="M420 250 C420 265 412 272 405 282 C398 292 398 305 398 325 L442 325 C442 305 442 292 435 282 C428 272 420 265 420 250 Z" fill="#260510"/>
+  <path d="M420 240 L420 250" stroke="url(#goldGrad)" stroke-width="2"/>
+
+  <!-- Side Minarets -->
+  <rect x="175" y="240" width="16" height="85" fill="#260510"/>
+  <path d="M183 222 C183 230 178 235 174 240 L192 240 C188 235 183 230 183 222 Z" fill="#260510"/>
+  <line x1="183" y1="215" x2="183" y2="222" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <rect x="489" y="240" width="16" height="85" fill="#260510"/>
+  <path d="M497 222 C497 230 492 235 488 240 L506 240 C502 235 497 230 497 222 Z" fill="#260510"/>
+  <line x1="497" y1="215" x2="497" y2="222" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Palace Base & Colonnade Wall -->
+  <rect x="150" y="320" width="380" height="40" fill="#260510"/>
+  <!-- Arched Windows in Palace Base -->
+  <g fill="#4A0D1F" opacity="0.8">
+    <path d="M330 340 Q340 330 350 340 L350 360 L330 360 Z"/>
+    <path d="M295 342 Q303 334 311 342 L311 360 L295 360 Z"/>
+    <path d="M369 342 Q377 334 385 342 L385 360 L369 360 Z"/>
+    <path d="M260 344 Q267 337 274 344 L274 360 L260 360 Z"/>
+    <path d="M406 344 Q413 337 420 344 L420 360 L406 360 Z"/>
+  </g>
+
+  <!-- Cypress Trees -->
+  <g fill="#1F040C">
+    <path d="M140 360 Q130 320 140 280 Q150 320 140 360 Z"/>
+    <path d="M160 360 Q152 330 160 295 Q168 330 160 360 Z"/>
+    <path d="M520 360 Q512 330 520 295 Q528 330 520 360 Z"/>
+    <path d="M540 360 Q530 320 540 280 Q550 320 540 360 Z"/>
+  </g>
+
+  <!-- Terrace / Water Reflecting Pool -->
+  <rect x="0" y="360" width="680" height="184" fill="url(#waterGrad)"/>
+  <!-- Gold Fountain / Lotus Pool in center -->
+  <polygon points="260,360 420,360 480,544 200,544" fill="#1C0612" opacity="0.9"/>
+  <!-- Water ripples and reflections -->
+  <ellipse cx="340" cy="420" rx="100" ry="8" fill="#FAD082" opacity="0.12"/>
+  <ellipse cx="340" cy="460" rx="130" ry="10" fill="#FAD082" opacity="0.1"/>
+  <ellipse cx="340" cy="500" rx="160" ry="12" fill="#FAD082" opacity="0.08"/>
+
+  <!-- Foreground Ornamental Jharokha Cusped Arch Frame -->
+  <!-- Outer Arch Border -->
+  <path d="M0 0 L680 0 L680 544 L600 544 L600 240 C600 130 510 50 400 50 C370 50 355 60 340 75 C325 60 310 50 280 50 C170 50 80 130 80 240 L80 544 L0 544 Z" fill="url(#archGrad)"/>
+
+  <!-- Intricate Cusped Arch Inner Cutout with Gold Outline -->
+  <path d="M80 544 L80 230 C80 180 110 140 150 110 C180 88 220 75 260 70 C280 67 300 75 315 88 C325 97 333 108 340 120 C347 108 355 97 365 88 C380 75 400 67 420 70 C460 75 500 88 530 110 C570 140 600 180 600 230 L600 544" fill="none" stroke="url(#goldGrad)" stroke-width="4.5"/>
+  <path d="M72 544 L72 230 C72 175 104 133 145 102 C176 79 218 65 260 60 C282 57 304 65 320 80 C329 88 335 97 340 108 C345 97 351 88 360 80 C376 65 398 57 420 60 C462 65 504 79 535 102 C576 133 608 175 608 230 L608 544" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Hanging Ornate Gold Lantern -->
+  <line x1="340" y1="0" x2="340" y2="120" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="340" cy="120" r="3" fill="url(#goldGrad)"/>
+  <!-- Lantern Cage -->
+  <path d="M333 125 L347 125 L352 145 L340 162 L328 145 Z" fill="#240712" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="340" cy="144" r="7" fill="#FFEAA7" opacity="0.95"/>
+  <circle cx="340" cy="144" r="18" fill="#FFEAA7" opacity="0.3"/>
+  <path d="M340 162 L340 178" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <circle cx="340" cy="180" r="2.5" fill="url(#goldGrad)"/>
+
+  <!-- Left & Right Hanging Chandeliers -->
+  <g transform="translate(190, 80)">
+    <line x1="0" y1="-80" x2="0" y2="40" stroke="url(#goldGrad)" stroke-width="1.2"/>
+    <path d="-6 42 L6 42 L9 58 L0 70 L-9 58 Z" fill="#240712" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <circle cx="0" cy="56" r="5" fill="#FFEAA7" opacity="0.9"/>
+  </g>
+  <g transform="translate(490, 80)">
+    <line x1="0" y1="-80" x2="0" y2="40" stroke="url(#goldGrad)" stroke-width="1.2"/>
+    <path d="-6 42 L6 42 L9 58 L0 70 L-9 58 Z" fill="#240712" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <circle cx="0" cy="56" r="5" fill="#FFEAA7" opacity="0.9"/>
+  </g>
+
+  <!-- Ornate corner flourishes -->
+  <g stroke="url(#goldGrad)" stroke-width="1.5" fill="none">
+    <path d="M20 20 Q50 20 60 50 Q60 20 90 20"/>
+    <circle cx="20" cy="20" r="4" fill="url(#goldGrad)"/>
+    <path d="M660 20 Q630 20 620 50 Q620 20 590 20"/>
+    <circle cx="660" cy="20" r="4" fill="url(#goldGrad)"/>
+  </g>
+</svg>

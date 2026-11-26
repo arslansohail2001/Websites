@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 544" width="680" height="544">
+  <defs>
+    <linearGradient id="valSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#040814"/>
+      <stop offset="35%" stop-color="#0B1530"/>
+      <stop offset="70%" stop-color="#142654"/>
+      <stop offset="100%" stop-color="#233E78"/>
+    </linearGradient>
+    <linearGradient id="valGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E5C158"/>
+      <stop offset="50%" stop-color="#FFF2CE"/>
+      <stop offset="100%" stop-color="#A87A1E"/>
+    </linearGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF7DC" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFF7DC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="680" height="544" fill="url(#valSky)"/>
+
+  <!-- Golden Stars in Night Sky -->
+  <g fill="#FFF9E6">
+    <circle cx="80" cy="60" r="1.5"/>
+    <circle cx="140" cy="95" r="1"/>
+    <circle cx="210" cy="45" r="2" fill="url(#starGlow)"/>
+    <circle cx="290" cy="80" r="1.2"/>
+    <circle cx="380" cy="50" r="1.8" fill="url(#starGlow)"/>
+    <circle cx="450" cy="90" r="1.5"/>
+    <circle cx="530" cy="40" r="2" fill="url(#starGlow)"/>
+    <circle cx="610" cy="75" r="1.2"/>
+    <circle cx="170" cy="140" r="1.5"/>
+    <circle cx="490" cy="130" r="1.5"/>
+  </g>
+
+  <!-- Golden Crescent Moon (Chand) -->
+  <path d="M520 80 A28 28 0 1 0 540 125 A32 32 0 1 1 520 80 Z" fill="url(#valGold)"/>
+
+  <!-- Grand Illuminated Palace Silhouette at Midnight -->
+  <path d="M340 200 C340 225 320 240 310 260 L370 260 C360 240 340 225 340 200 Z" fill="#04091A" stroke="url(#valGold)" stroke-width="2"/>
+  <line x1="340" y1="185" x2="340" y2="200" stroke="url(#valGold)" stroke-width="2"/>
+  <circle cx="340" cy="184" r="3" fill="url(#valGold)"/>
+
+  <path d="M220 230 C220 250 205 262 195 280 L245 280 C235 262 220 250 220 230 Z" fill="#04091A" stroke="url(#valGold)" stroke-width="1.5"/>
+  <path d="M460 230 C460 250 445 262 435 280 L485 280 C475 262 460 250 460 230 Z" fill="#04091A" stroke="url(#valGold)" stroke-width="1.5"/>
+
+  <!-- Palace Balcony Walls -->
+  <rect x="150" y="280" width="380" height="80" fill="#04091A" stroke="url(#valGold)" stroke-width="1.5"/>
+
+  <!-- Glowing Diya / Candle Lights on the Palace Terrace -->
+  <g fill="#FFAA00">
+    <ellipse cx="200" cy="280" rx="3" ry="5"/>
+    <ellipse cx="250" cy="280" rx="3" ry="5"/>
+    <ellipse cx="300" cy="280" rx="3" ry="5"/>
+    <ellipse cx="340" cy="280" rx="4" ry="6" fill="#FFF2CE"/>
+    <ellipse cx="380" cy="280" rx="3" ry="5"/>
+    <ellipse cx="430" cy="280" rx="3" ry="5"/>
+    <ellipse cx="480" cy="280" rx="3" ry="5"/>
+  </g>
+
+  <!-- Glowing Reflecting Pool at Night -->
+  <rect x="0" y="360" width="680" height="184" fill="#030612"/>
+  <ellipse cx="340" cy="440" rx="160" ry="18" fill="url(#valGold)" opacity="0.15"/>
+
+  <!-- Grand Valima Mughal Archway Frame (Foreground) -->
+  <path d="M0 0 L680 0 L680 544 L610 544 L610 230 C610 130 520 60 410 60 C380 60 360 70 340 85 C320 70 300 60 270 60 C160 60 70 130 70 230 L70 544 L0 544 Z" fill="#060C1F" stroke="url(#valGold)" stroke-width="2.5"/>
+
+  <!-- Hanging Moroccan / Mughal Brass Lanterns -->
+  <g transform="translate(160, 40)">
+    <line x1="0" y1="-40" x2="0" y2="80" stroke="url(#valGold)" stroke-width="1.5"/>
+    <path d="-10 80 L10 80 L15 110 L0 130 L-15 110 Z" fill="#04091A" stroke="url(#valGold)" stroke-width="2"/>
+    <circle cx="0" cy="105" r="9" fill="#FFDA73" opacity="0.9"/>
+    <circle cx="0" cy="105" r="22" fill="#FFDA73" opacity="0.25"/>
+  </g>
+
+  <g transform="translate(520, 40)">
+    <line x1="0" y1="-40" x2="0" y2="80" stroke="url(#valGold)" stroke-width="1.5"/>
+    <path d="-10 80 L10 80 L15 110 L0 130 L-15 110 Z" fill="#04091A" stroke="url(#valGold)" stroke-width="2"/>
+    <circle cx="0" cy="105" r="9" fill="#FFDA73" opacity="0.9"/>
+    <circle cx="0" cy="105" r="22" fill="#FFDA73" opacity="0.25"/>
+  </g>
+</svg>

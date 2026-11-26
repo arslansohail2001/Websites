@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 544" width="680" height="544">
+  <defs>
+    <linearGradient id="kashSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#260C22"/>
+      <stop offset="40%" stop-color="#5E183F"/>
+      <stop offset="70%" stop-color="#9C2D5C"/>
+      <stop offset="90%" stop-color="#DE7382"/>
+      <stop offset="100%" stop-color="#FCD2C7"/>
+    </linearGradient>
+    <linearGradient id="kashGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#FFEFA8"/>
+      <stop offset="100%" stop-color="#997722"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C2185B"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="680" height="544" fill="url(#kashSky)"/>
+
+  <!-- Himalayan Snowcaps Silhouette in Distance -->
+  <polygon points="0,320 80,260 140,290 220,240 300,300 380,250 460,310 540,245 610,285 680,250 680,360 0,360" fill="#360F25" opacity="0.6"/>
+  <polygon points="0,340 120,285 240,335 360,280 480,330 600,285 680,330 680,380 0,380" fill="#240718" opacity="0.8"/>
+
+  <!-- Dal Lake Water -->
+  <rect x="0" y="360" width="680" height="184" fill="#1C0615"/>
+  <ellipse cx="340" cy="430" rx="200" ry="25" fill="#FCD2C7" opacity="0.15"/>
+
+  <!-- Shikara Boat Silhouette with Floral Canopy -->
+  <g transform="translate(260, 390) scale(0.85)">
+    <!-- Wooden boat hull -->
+    <path d="M-80 20 Q-30 35 60 30 Q120 25 150 10 Q110 22 40 22 Q-30 20 -80 20 Z" fill="#0A0207" stroke="url(#kashGold)" stroke-width="1.2"/>
+    <!-- Canopy roof -->
+    <path d="M-10 -5 L80 -5 L70 -25 L0 -25 Z" fill="#6B133A" stroke="url(#kashGold)" stroke-width="1.5"/>
+    <!-- Canopy poles -->
+    <line x1="-5" y1="-5" x2="-5" y2="20" stroke="url(#kashGold)" stroke-width="1.5"/>
+    <line x1="75" y1="-5" x2="75" y2="20" stroke="url(#kashGold)" stroke-width="1.5"/>
+    <!-- Kashmiri Chinar leaf motif on canopy -->
+    <circle cx="35" cy="-15" r="4" fill="url(#kashGold)"/>
+  </g>
+
+  <!-- Cascading Kashmiri Chinar Leaves & Rose Garlands Arch (Foreground) -->
+  <!-- Left Cascading Garland -->
+  <g stroke="url(#kashGold)" stroke-width="1.5" fill="none">
+    <path d="M-20 -20 Q120 40 100 240 Q90 340 40 460"/>
+    <path d="M700 -20 Q560 40 580 240 Q590 340 640 460"/>
+  </g>
+
+  <!-- Roses and Chinar leaves on the garland -->
+  <g fill="url(#roseGrad)" stroke="url(#kashGold)" stroke-width="1.2">
+    <circle cx="80" cy="90" r="14"/>
+    <circle cx="105" cy="160" r="16"/>
+    <circle cx="95" cy="240" r="15"/>
+    <circle cx="65" cy="330" r="14"/>
+
+    <circle cx="600" cy="90" r="14"/>
+    <circle cx="575" cy="160" r="16"/>
+    <circle cx="585" cy="240" r="15"/>
+    <circle cx="615" cy="330" r="14"/>
+  </g>
+
+  <!-- Ornate Arch Top Framing -->
+  <path d="M0 0 L680 0 L680 80 Q340 130 0 80 Z" fill="#1C0615" stroke="url(#kashGold)" stroke-width="2"/>
+  <circle cx="340" cy="55" r="12" fill="none" stroke="url(#kashGold)" stroke-width="2"/>
+  <circle cx="340" cy="55" r="5" fill="url(#kashGold)"/>
+</svg>

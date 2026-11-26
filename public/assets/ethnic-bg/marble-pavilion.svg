@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 544" width="680" height="544">
+  <defs>
+    <linearGradient id="marbSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B263B"/>
+      <stop offset="40%" stop-color="#415A77"/>
+      <stop offset="70%" stop-color="#8E9AAF"/>
+      <stop offset="100%" stop-color="#E0E1DD"/>
+    </linearGradient>
+    <linearGradient id="marbStone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F2EDE4"/>
+      <stop offset="100%" stop-color="#D9D2C5"/>
+    </linearGradient>
+    <linearGradient id="marbGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="50%" stop-color="#F7E7A6"/>
+      <stop offset="100%" stop-color="#9C7A28"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="680" height="544" fill="url(#marbSky)"/>
+
+  <!-- Soft Ethereal Moon -->
+  <circle cx="340" cy="150" r="50" fill="#FFFBF2" opacity="0.9"/>
+  <circle cx="340" cy="150" r="85" fill="#FFFBF2" opacity="0.2"/>
+
+  <!-- Distant Palace Domes in Mist -->
+  <path d="M120 330 C120 290 140 270 160 250 C180 270 200 290 200 330 Z" fill="#CCD3DB" opacity="0.5"/>
+  <path d="M480 330 C480 290 500 270 520 250 C540 270 560 290 560 330 Z" fill="#CCD3DB" opacity="0.5"/>
+
+  <!-- Symmetrical Classical White Marble Pavilion -->
+  <!-- Pavilion Base Terrace -->
+  <rect x="140" y="320" width="400" height="60" fill="url(#marbStone)" stroke="url(#marbGold)" stroke-width="2"/>
+
+  <!-- Grand Central Onion Dome -->
+  <path d="M340 120 C340 150 310 180 290 220 L390 220 C370 180 340 150 340 120 Z" fill="url(#marbStone)" stroke="url(#marbGold)" stroke-width="2.5"/>
+  <line x1="340" y1="95" x2="340" y2="120" stroke="url(#marbGold)" stroke-width="3"/>
+  <circle cx="340" cy="94" r="5" fill="url(#marbGold)"/>
+
+  <!-- Side Domes -->
+  <path d="M220 180 C220 200 205 220 190 245 L250 245 C235 220 220 200 220 180 Z" fill="url(#marbStone)" stroke="url(#marbGold)" stroke-width="2"/>
+  <line x1="220" y1="165" x2="220" y2="180" stroke="url(#marbGold)" stroke-width="2"/>
+
+  <path d="M460 180 C460 200 445 220 430 245 L490 245 C475 220 460 200 460 180 Z" fill="url(#marbStone)" stroke="url(#marbGold)" stroke-width="2"/>
+  <line x1="460" y1="165" x2="460" y2="180" stroke="url(#marbGold)" stroke-width="2"/>
+
+  <!-- Marble Pillars & Cusped Arches -->
+  <rect x="170" y="245" width="340" height="75" fill="url(#marbStone)" stroke="url(#marbGold)" stroke-width="1.5"/>
+  <!-- Cutout Archways inside pavilion -->
+  <g fill="#1F2E45">
+    <path d="M200 320 L200 280 Q215 260 230 280 L230 320 Z"/>
+    <path d="M260 320 L260 275 Q285 250 310 275 L310 320 Z"/>
+    <path d="M370 320 L370 275 Q395 250 420 275 L420 320 Z"/>
+    <path d="M450 320 L450 280 Q465 260 480 280 L480 320 Z"/>
+    <!-- Grand Center Archway -->
+    <path d="M315 320 L315 265 Q340 235 365 265 L365 320 Z" fill="#142033" stroke="url(#marbGold)" stroke-width="1.5"/>
+  </g>
+
+  <!-- Charbagh Geometric Water Channel & Fountain -->
+  <polygon points="280,380 400,380 470,544 210,544" fill="#20334D" stroke="url(#marbGold)" stroke-width="2"/>
+  <!-- Fountain Jet -->
+  <g stroke="#FFFFFF" opacity="0.85">
+    <path d="M340 430 Q330 390 320 410" fill="none" stroke-width="1.8"/>
+    <path d="M340 430 Q350 390 360 410" fill="none" stroke-width="1.8"/>
+    <path d="M340 430 Q335 375 340 400" fill="none" stroke-width="2"/>
+  </g>
+  <circle cx="340" cy="430" r="10" fill="url(#marbGold)"/>
+
+  <!-- Inlaid Pietre Dure Gold Floral Tracery on Marble Borders -->
+  <path d="M20 20 L660 20 L660 524 L20 524 Z" fill="none" stroke="url(#marbGold)" stroke-width="2"/>
+  <path d="M30 30 L650 30 L650 514 L30 514 Z" fill="none" stroke="url(#marbGold)" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>
