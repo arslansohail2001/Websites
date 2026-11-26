@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 544" width="680" height="544">
+  <defs>
+    <linearGradient id="fortSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2E0E08"/>
+      <stop offset="40%" stop-color="#6E2614"/>
+      <stop offset="70%" stop-color="#B84F25"/>
+      <stop offset="100%" stop-color="#F2A45C"/>
+    </linearGradient>
+    <linearGradient id="sandGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#FFE899"/>
+      <stop offset="100%" stop-color="#A37E22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="680" height="544" fill="url(#fortSky)"/>
+
+  <!-- Desert Sun -->
+  <circle cx="340" cy="270" r="70" fill="#FFF1C2" opacity="0.9"/>
+  <circle cx="340" cy="270" r="110" fill="#F2A45C" opacity="0.35"/>
+
+  <!-- Rolling Sand Dunes -->
+  <path d="M0 340 Q160 300 320 345 T680 320 L680 544 L0 544 Z" fill="#521B0D" opacity="0.8"/>
+  <path d="M0 370 Q240 330 480 380 T680 350 L680 544 L0 544 Z" fill="#381007"/>
+
+  <!-- Distant Desert Fort & Minarets -->
+  <rect x="220" y="270" width="240" height="70" fill="#240A04" stroke="url(#sandGold)" stroke-width="1.2"/>
+  <path d="M340 230 C340 245 325 255 315 270 L365 270 C355 255 340 245 340 230 Z" fill="#240A04" stroke="url(#sandGold)" stroke-width="1.5"/>
+  <path d="M240 250 C240 260 230 265 225 270 L255 270 C250 265 240 260 240 250 Z" fill="#240A04"/>
+  <path d="M440 250 C440 260 430 265 425 270 L455 270 C450 265 440 260 440 250 Z" fill="#240A04"/>
+
+  <!-- Camel Caravan Silhouette -->
+  <g transform="translate(140, 340) scale(0.65)" fill="#1A0602">
+    <!-- Camel 1 -->
+    <path d="M30 40 C35 30 42 22 45 15 C47 10 52 14 50 18 C48 24 42 30 40 40 C50 35 65 30 75 35 C80 30 90 28 95 38 C100 45 98 60 95 70 L98 95 L88 95 L86 75 L74 75 L72 95 L62 95 L65 70 C55 70 45 75 40 85 L38 95 L28 95 L30 75 L20 75 L18 95 L8 95 L12 60 C15 48 22 42 30 40 Z"/>
+    <!-- Camel 2 (Following) -->
+    <g transform="translate(80, 5) scale(0.85)">
+      <path d="M30 40 C35 30 42 22 45 15 C47 10 52 14 50 18 C48 24 42 30 40 40 C50 35 65 30 75 35 C80 30 90 28 95 38 C100 45 98 60 95 70 L98 95 L88 95 L86 75 L74 75 L72 95 L62 95 L65 70 C55 70 45 75 40 85 L38 95 L28 95 L30 75 L20 75 L18 95 L8 95 L12 60 C15 48 22 42 30 40 Z"/>
+    </g>
+  </g>
+
+  <!-- Palm Trees Silhouette -->
+  <g transform="translate(540, 290)">
+    <path d="M0 0 Q-30 -30 -50 -15 Q-30 -5 0 0 Z" fill="#1A0602"/>
+    <path d="M0 0 Q-20 -40 -35 -35 Q-15 -15 0 0 Z" fill="#1A0602"/>
+    <path d="M0 0 Q0 -50 5 -55 Q5 -25 0 0 Z" fill="#1A0602"/>
+    <path d="M0 0 Q25 -40 40 -30 Q20 -15 0 0 Z" fill="#1A0602"/>
+    <path d="M0 0 Q40 -25 55 -10 Q30 -5 0 0 Z" fill="#1A0602"/>
+    <path d="M-4 0 C-6 30 -8 60 -12 80 L12 80 C8 60 6 30 4 0 Z" fill="#1A0602"/>
+  </g>
+
+  <!-- Scalloped Colonial / Haveli Arched Frame -->
+  <path d="M0 0 L680 0 L680 544 L620 544 L620 200 C620 110 530 50 410 50 C380 50 360 60 340 75 C320 60 300 50 270 50 C150 50 60 110 60 200 L60 544 L0 544 Z" fill="#210804" stroke="url(#sandGold)" stroke-width="2.5"/>
+</svg>

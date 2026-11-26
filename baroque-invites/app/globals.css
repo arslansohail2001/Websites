@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8D48B;
+  --color-charcoal: #1A1A1A;
+  --color-cream: #FAF7F2;
+  --color-dark: #0F0F0F;
+  --color-gray: #6B6B6B;
+  --color-whatsapp: #25D366;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-poppins), "Poppins", system-ui, sans-serif;
+
+  --shadow-gold-glow: 0 0 20px rgba(201, 168, 76, 0.3);
+  --shadow-gold-glow-lg: 0 0 40px rgba(201, 168, 76, 0.4);
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins), "Poppins", system-ui, sans-serif;
+  color: #1A1A1A;
+  background: #FFFFFF;
+}
+
+/* ─── Custom Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8D48B;
+}
+
+/* ─── Utility Classes ──────────────────────────────────── */
+.section-eyebrow {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #C9A84C;
+}
+
+/* ─── Focus styles ─────────────────────────────────────── */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #C9A84C !important;
+  box-shadow: 0 0 0 1px #C9A84C;
+}

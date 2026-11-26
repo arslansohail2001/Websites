@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 544" width="680" height="544">
+  <defs>
+    <linearGradient id="rajSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#300714"/>
+      <stop offset="35%" stop-color="#6B1426"/>
+      <stop offset="65%" stop-color="#B83D1B"/>
+      <stop offset="85%" stop-color="#E87A2A"/>
+      <stop offset="100%" stop-color="#FFC966"/>
+    </linearGradient>
+    <linearGradient id="fortGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#26040C"/>
+      <stop offset="100%" stop-color="#140105"/>
+    </linearGradient>
+    <linearGradient id="rajGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E5C158"/>
+      <stop offset="50%" stop-color="#FFF0BA"/>
+      <stop offset="100%" stop-color="#A87A1E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="680" height="544" fill="url(#rajSky)"/>
+
+  <!-- Big Glowing Rajasthani Sunset Sun -->
+  <circle cx="340" cy="300" r="85" fill="#FFEAA7" opacity="0.85"/>
+  <circle cx="340" cy="300" r="130" fill="#E87A2A" opacity="0.3"/>
+
+  <!-- Layered Sandstone Hill Ridges -->
+  <path d="M0 360 Q180 320 360 355 T680 340 L680 544 L0 544 Z" fill="#420B19" opacity="0.85"/>
+  <path d="M0 390 Q220 350 440 395 T680 380 L680 544 L0 544 Z" fill="#2E0610"/>
+
+  <!-- Fort Bastions & Ramparts Silhouette -->
+  <!-- Left Watchtower / Chhatri -->
+  <rect x="80" y="270" width="40" height="90" fill="url(#fortGrad)"/>
+  <path d="M70 270 L130 270 L125 255 L75 255 Z" fill="url(#fortGrad)" stroke="url(#rajGold)" stroke-width="1"/>
+  <!-- Chhatri Dome on top -->
+  <path d="M100 230 C100 242 85 248 80 255 L120 255 C115 248 100 242 100 230 Z" fill="url(#fortGrad)" stroke="url(#rajGold)" stroke-width="1.5"/>
+  <line x1="100" y1="220" x2="100" y2="230" stroke="url(#rajGold)" stroke-width="1.5"/>
+
+  <!-- Right Chhatri -->
+  <rect x="560" y="270" width="40" height="90" fill="url(#fortGrad)"/>
+  <path d="M550 270 L610 270 L605 255 L555 255 Z" fill="url(#fortGrad)" stroke="url(#rajGold)" stroke-width="1"/>
+  <path d="M580 230 C580 242 565 248 560 255 L600 255 C595 248 580 242 580 230 Z" fill="url(#fortGrad)" stroke="url(#rajGold)" stroke-width="1.5"/>
+  <line x1="580" y1="220" x2="580" y2="230" stroke="url(#rajGold)" stroke-width="1.5"/>
+
+  <!-- Main Fort Walls with Battlements -->
+  <path d="M120 330 L560 330 L560 410 L120 410 Z" fill="url(#fortGrad)"/>
+  <!-- Stepped Battlements -->
+  <g fill="url(#fortGrad)">
+    <rect x="140" y="320" width="16" height="15"/>
+    <rect x="170" y="320" width="16" height="15"/>
+    <rect x="200" y="320" width="16" height="15"/>
+    <rect x="230" y="320" width="16" height="15"/>
+    <rect x="430" y="320" width="16" height="15"/>
+    <rect x="460" y="320" width="16" height="15"/>
+    <rect x="490" y="320" width="16" height="15"/>
+    <rect x="520" y="320" width="16" height="15"/>
+  </g>
+
+  <!-- Central Grand Palace Domes -->
+  <path d="M340 240 C340 260 325 270 315 285 L365 285 C355 270 340 260 340 240 Z" fill="url(#fortGrad)" stroke="url(#rajGold)" stroke-width="1.8"/>
+  <line x1="340" y1="228" x2="340" y2="240" stroke="url(#rajGold)" stroke-width="2"/>
+
+  <!-- Elephant Procession Silhouette (Carrying Royal Howdah) -->
+  <g transform="translate(290, 360) scale(0.6)" fill="#140105">
+    <!-- Elephant body -->
+    <path d="M50 40 C30 40 15 55 10 75 C8 85 8 100 12 110 L12 140 L26 140 L28 115 L44 115 L46 140 L60 140 L62 105 C75 105 85 110 92 120 L96 140 L110 140 L108 110 L118 140 L132 140 L128 95 C125 70 110 50 85 45 Z"/>
+    <!-- Trunk & Tusk -->
+    <path d="M12 75 C5 85 0 100 2 115 C5 125 14 125 15 118 C12 105 18 90 25 85 Z"/>
+    <path d="M22 92 L34 98" stroke="url(#rajGold)" stroke-width="2"/>
+    <!-- Royal Howdah canopy on back -->
+    <path d="M52 40 L98 40 L94 20 L56 20 Z" fill="url(#rajGold)"/>
+    <path d="M50 20 Q75 5 100 20 Z" fill="url(#rajGold)"/>
+  </g>
+
+  <!-- Intricate Jali Screen Arch Overlay along borders -->
+  <g stroke="url(#rajGold)" stroke-width="1.5" fill="none">
+    <!-- Top Decorative Arch Header -->
+    <path d="M0 60 Q170 30 340 50 Q510 30 680 60"/>
+    <path d="M0 72 Q170 42 340 62 Q510 42 680 72"/>
+    <!-- Jali Diamond Patterns at top corners -->
+    <polygon points="40,20 60,40 40,60 20,40"/>
+    <polygon points="640,20 660,40 640,60 620,40"/>
+    <polygon points="80,30 95,45 80,60 65,45"/>
+    <polygon points="600,30 615,45 600,60 585,45"/>
+  </g>
+</svg>
